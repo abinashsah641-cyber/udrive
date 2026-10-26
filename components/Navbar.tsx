@@ -30,10 +30,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Official U Drive Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group focus:outline-none py-2">
-            <div className="relative h-12 w-48 sm:w-56 transition-transform group-hover:scale-[1.02]">
+          <Link href="/" className="flex items-center gap-3 group focus:outline-none py-1">
+            <div className="relative h-11 sm:h-12 w-48 sm:w-56 transition-transform group-hover:scale-[1.02]">
               <Image
-                src="/images/logo/udrive-logo-dark.svg"
+                src="/images/logo/udrive-logo-dark.png"
                 alt="U Drive - Every Ride A New Story"
                 fill
                 priority

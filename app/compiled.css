@@ -265,6 +265,9 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .invisible\! {
+    visibility: hidden !important;
+  }
   .visible {
     visibility: visible;
   }
@@ -562,9 +565,6 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
-  .w-9 {
-    width: calc(var(--spacing) * 9);
-  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -582,6 +582,9 @@
   }
   .w-28 {
     width: calc(var(--spacing) * 28);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
   }
   .w-48 {
     width: calc(var(--spacing) * 48);
@@ -1654,6 +1657,9 @@
   .underline {
     text-decoration-line: underline;
   }
+  .underline\! {
+    text-decoration-line: underline !important;
+  }
   .underline-offset-4 {
     text-underline-offset: 4px;
   }
@@ -2043,6 +2049,9 @@
     }
     .sm\:inline {
       display: inline;
+    }
+    .sm\:h-12 {
+      height: calc(var(--spacing) * 12);
     }
     .sm\:w-56 {
       width: calc(var(--spacing) * 56);

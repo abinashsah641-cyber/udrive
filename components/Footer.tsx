@@ -13,7 +13,7 @@ export default function Footer() {
             <Link href="/" className="inline-block focus:outline-none">
               <div className="relative h-12 w-52 sm:w-60">
                 <Image
-                  src="/images/logo/udrive-logo-dark.svg"
+                  src="/images/logo/udrive-logo-dark.png"
                   alt="U Drive - Every Ride A New Story"
                   fill
                   className="object-contain object-left"

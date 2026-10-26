@@ -17,14 +17,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <aside className="w-full md:w-64 bg-[#080A0D] text-white flex flex-col justify-between shrink-0 border-r border-[#242933]">
         <div className="p-6 space-y-6">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-[#FFD83D] text-[#080A0D] flex items-center justify-center font-black">
-              <Shield className="w-5 h-5 text-[#080A0D]" />
-            </div>
-            <div>
-              <span className="font-heading font-bold text-sm tracking-tight text-white block">
-                U Drive Admin
-              </span>
-              <span className="text-[10px] text-slate-400 font-mono">Operations Portal</span>
+            <div className="relative h-9 w-40">
+              <Image
+                src="/images/logo/udrive-logo-dark.png"
+                alt="U Drive Admin"
+                fill
+                priority
+                className="object-contain object-left"
+              />
             </div>
           </div>
 
