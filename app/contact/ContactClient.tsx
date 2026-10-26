@@ -42,10 +42,14 @@ export default function ContactClient({ settings }: ContactClientProps) {
             <div className="flex items-start gap-3">
               <Phone className="w-4 h-4 text-[#FFD83D] shrink-0 mt-0.5" />
               <div>
-                <strong className="block text-white">Phone & Support</strong>
-                <span className="text-slate-400">
-                  {settings.phone || 'Direct line available upon booking confirmation'}
-                </span>
+                <strong className="block text-white">Direct Phone Line</strong>
+                <a
+                  href={`tel:${(settings.phone || '+977-9800899505').replace(/\s+/g, '')}`}
+                  className="text-slate-300 hover:text-[#FFD83D] transition-colors font-medium text-sm"
+                >
+                  {settings.phone || '+977-9800899505'}
+                </a>
+                <span className="block text-slate-500 text-[11px] mt-0.5">Direct reservations & inquiry desk</span>
               </div>
             </div>
 
@@ -53,9 +57,29 @@ export default function ContactClient({ settings }: ContactClientProps) {
               <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
               <div>
                 <strong className="block text-white">WhatsApp Desk</strong>
-                <span className="text-slate-400">
-                  {settings.whatsappNumber || 'Available via WhatsApp Float & Booking'}
-                </span>
+                <a
+                  href={`https://wa.me/9779800899505?text=${encodeURIComponent('Hello U Drive! I would like to inquire about vehicle rental availability in Nepal.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300 transition-colors font-medium text-sm"
+                >
+                  +977 9800899505
+                </a>
+                <span className="block text-slate-500 text-[11px] mt-0.5">Instant response via WhatsApp</span>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Mail className="w-4 h-4 text-[#60A5FA] shrink-0 mt-0.5" />
+              <div>
+                <strong className="block text-white">Official Email</strong>
+                <a
+                  href={`mailto:${settings.email || 'udriverentalcarservice@gmail.com'}`}
+                  className="text-slate-300 hover:text-[#FFD83D] transition-colors font-medium text-xs break-all"
+                >
+                  {settings.email || 'udriverentalcarservice@gmail.com'}
+                </a>
+                <span className="block text-slate-500 text-[11px] mt-0.5">Corporate & advance inquiries</span>
               </div>
             </div>
 
@@ -63,7 +87,8 @@ export default function ContactClient({ settings }: ContactClientProps) {
               <Clock className="w-4 h-4 text-[#FFD83D] shrink-0 mt-0.5" />
               <div>
                 <strong className="block text-white">Timezone & Operating Hours</strong>
-                <span className="text-slate-400">Asia/Kathmandu (NPT, UTC +05:45)</span>
+                <span className="text-slate-300 font-medium">Asia/Kathmandu (NPT, UTC +05:45)</span>
+                <span className="block text-slate-500 text-[11px] mt-0.5">7 Days a Week • 8:00 AM – 9:00 PM</span>
               </div>
             </div>
           </div>

@@ -31,7 +31,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Official U Drive Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group focus:outline-none py-1">
-            <div className="relative h-11 sm:h-12 w-48 sm:w-56 transition-transform group-hover:scale-[1.02]">
+            <div className="relative h-8 sm:h-9 w-36 sm:w-42 transition-transform group-hover:scale-[1.02]">
               <Image
                 src="/images/logo/udrive-logo-dark.png"
                 alt="U Drive - Every Ride A New Story"
@@ -65,6 +65,15 @@ export default function Navbar() {
 
           {/* Action CTAs */}
           <div className="hidden md:flex items-center gap-3">
+            <a
+              href="tel:+9779800899505"
+              className="hidden xl:flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-[#FFD83D] px-2.5 py-2 rounded-lg border border-[#242933] hover:border-slate-600 bg-white/[0.02] transition-colors"
+              title="Call U Drive"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#FFD83D]" />
+              <span>+977-9800899505</span>
+            </a>
+
             <Link
               href="/admin"
               className="text-xs text-slate-400 hover:text-slate-200 px-3 py-2 rounded-lg border border-[#242933] hover:border-slate-600 flex items-center gap-1.5 transition-colors"
@@ -131,10 +140,23 @@ export default function Navbar() {
             <Link
               href="/booking"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full bg-[#FFD83D] text-[#080A0D] font-bold py-3 rounded-xl text-center shadow-lg shadow-[#FFD83D]/20"
+              className="w-full bg-[#FFD83D] text-[#080A0D] font-bold py-3 rounded-xl text-center shadow-lg shadow-[#FFD83D]/20 font-heading"
             >
               Start Booking Request
             </Link>
+            
+            <div className="py-2 px-1 flex flex-col gap-1.5 border-t border-b border-[#242933]/60 text-xs text-slate-300">
+              <a href="tel:+9779800899505" className="flex items-center gap-2 hover:text-[#FFD83D] py-1">
+                <Phone className="w-3.5 h-3.5 text-[#FFD83D]" />
+                <span className="font-semibold">+977-9800899505</span>
+                <span className="text-slate-500">(Direct Call)</span>
+              </a>
+              <a href="mailto:udriverentalcarservice@gmail.com" className="flex items-center gap-2 hover:text-[#FFD83D] py-1 text-slate-400">
+                <span>✉</span>
+                <span className="truncate">udriverentalcarservice@gmail.com</span>
+              </a>
+            </div>
+
             <Link
               href="/admin"
               onClick={() => setMobileMenuOpen(false)}

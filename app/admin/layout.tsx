@@ -17,7 +17,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <aside className="w-full md:w-64 bg-[#080A0D] text-white flex flex-col justify-between shrink-0 border-r border-[#242933]">
         <div className="p-6 space-y-6">
           <div className="flex items-center gap-2.5">
-            <div className="relative h-9 w-40">
+            <div className="relative h-7 w-32">
               <Image
                 src="/images/logo/udrive-logo-dark.png"
                 alt="U Drive Admin"

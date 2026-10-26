@@ -15,10 +15,10 @@ export interface UDriveDataStore {
 }
 
 const DEFAULT_SETTINGS: SiteSettings = {
-  businessName: 'UDrive Rental Service',
-  phone: '',
-  whatsappNumber: '', // Configured via env or admin dashboard
-  email: '',
+  businessName: 'U Drive Rental Service',
+  phone: '+977-9800899505',
+  whatsappNumber: '9800899505', // Official WhatsApp line
+  email: 'udriverentalcarservice@gmail.com',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61584871988112',
   pickupLocations: [
     'Tribhuvan International Airport (TIA), Kathmandu',
@@ -41,9 +41,9 @@ function ensureStore(): UDriveDataStore {
         bookings: [],
         settings: {
           ...DEFAULT_SETTINGS,
-          whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '',
-          phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '',
-          email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '',
+          whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '9800899505',
+          phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '+977-9800899505',
+          email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'udriverentalcarservice@gmail.com',
         },
       };
       fs.writeFileSync(STORE_PATH, JSON.stringify(initial, null, 2), 'utf-8');

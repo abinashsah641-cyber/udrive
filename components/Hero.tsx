@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import HeroSlider from '@/components/HeroSlider';
 import { getTodayNepal, getTomorrowNepal, calculateRentalDays } from '@/lib/date-utils';
 import {
   Calendar,
@@ -79,10 +80,10 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Hero Layout: Copy + Real Featured Vehicle Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        {/* Top Hero Layout: Copy + Real 19-Vehicle Showcase Slider */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
           {/* Hero Content Left */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-6 space-y-6">
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#151A24] border border-[#242933] text-xs font-medium text-slate-300">
               <span className="w-2 h-2 rounded-full bg-[#FFD83D] animate-pulse" />
               <span className="font-semibold text-[#FFD83D] uppercase tracking-wider text-[11px]">U Drive Nepal</span>
@@ -106,7 +107,7 @@ export default function Hero() {
                 href="/vehicles"
                 className="bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] font-bold text-base px-7 py-3.5 rounded-xl shadow-xl shadow-[#FFD83D]/15 hover:scale-[1.02] transition-all flex items-center gap-2 group font-heading"
               >
-                <span>Explore Our Fleet (19 Models)</span>
+                <span>Explore Fleet (19 Models)</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
 
@@ -135,47 +136,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Hero Visual Right: Featured Fleet Showcase */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-lg lg:max-w-none">
-              {/* Dynamic Vehicle Display */}
-              <div className="relative rounded-2xl bg-[#12161F]/90 border border-[#242933] p-6 shadow-2xl backdrop-blur-md overflow-hidden">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="bg-[#FFD83D] text-[#080A0D] text-[11px] font-bold px-2.5 py-0.5 rounded uppercase">
-                      Featured EV
-                    </span>
-                    <span className="text-xs font-semibold text-white">Deepal S07</span>
-                  </div>
-                  <span className="text-xs text-[#60A5FA] font-mono">485 km Range</span>
-                </div>
-
-                {/* Hero Car Real Photo Showcase */}
-                <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden my-2 shadow-2xl bg-[#080A0D]">
-                  <Image
-                    src="/images/vehicles/deepal-s07.jpg"
-                    alt="Deepal S07 Luxury EV SUV"
-                    fill
-                    priority
-                    className="object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 text-white text-xs font-medium bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded">
-                    Changan Deepal S07 • Premium Electric
-                  </div>
-                </div>
-
-                {/* Road accent line */}
-                <div className="relative w-full h-1 bg-[#242933] rounded-full overflow-hidden my-3">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FFD83D] to-transparent w-1/3 animate-[pulse_2s_infinite]" />
-                </div>
-
-                <div className="flex items-center justify-between text-xs text-slate-400">
-                  <span>175 mm Ground Clearance</span>
-                  <span className="text-[#FFD83D] font-bold text-sm">NPR 13,000 / day</span>
-                </div>
-              </div>
-            </div>
+          {/* Hero Visual Right: Interactive Auto-Scroll Vehicle Slider */}
+          <div className="lg:col-span-6 relative">
+            <HeroSlider />
           </div>
         </div>
 

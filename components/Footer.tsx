@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Zap, Fuel, Calendar, ShieldCheck, MapPin, Clock, ExternalLink } from 'lucide-react';
+import { Zap, Fuel, Calendar, ShieldCheck, MapPin, Clock, ExternalLink, Phone, Mail, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block focus:outline-none">
-              <div className="relative h-12 w-52 sm:w-60">
+              <div className="relative h-8 w-36 sm:w-40">
                 <Image
                   src="/images/logo/udrive-logo-dark.png"
                   alt="U Drive - Every Ride A New Story"
@@ -21,9 +21,39 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm pt-2">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm pt-1">
               Every ride a new story. Premium electric vehicles and reliable fuel cars for hire across Nepal. Experience transparent pricing with daily, weekly, 15-day, and 30-day package rates.
             </p>
+
+            {/* Direct Official Contact Information */}
+            <div className="pt-2 space-y-2 text-xs">
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-[#FFD83D] shrink-0" />
+                <span className="text-slate-400">Mobile / Call:</span>
+                <a href="tel:+9779800899505" className="text-white hover:text-[#FFD83D] font-semibold transition-colors">
+                  +977-9800899505
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <MessageCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span className="text-slate-400">WhatsApp:</span>
+                <a
+                  href="https://wa.me/9779800899505?text=Hello%20U%20Drive!%20I%20would%20like%20to%20inquire%20about%20vehicle%20rental%20availability%20in%20Nepal."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
+                >
+                  +977 9800899505
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-[#60A5FA] shrink-0" />
+                <span className="text-slate-400">Email:</span>
+                <a href="mailto:udriverentalcarservice@gmail.com" className="text-slate-200 hover:text-[#FFD83D] transition-colors break-all">
+                  udriverentalcarservice@gmail.com
+                </a>
+              </div>
+            </div>
 
             <div className="pt-2 flex items-center gap-3">
               <a

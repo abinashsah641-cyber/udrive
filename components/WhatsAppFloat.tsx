@@ -12,7 +12,11 @@ export default function WhatsAppFloat({ customMessage, phoneNumber }: WhatsAppFl
   const [showConfigNotice, setShowConfigNotice] = useState(false);
 
   // Read configured business WhatsApp number
-  const configuredNumber = phoneNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '';
+  const rawNumber = phoneNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '9800899505';
+  const cleanDigits = rawNumber.replace(/[^0-9]/g, '');
+  // Format with Nepal country code 977 if needed
+  const configuredNumber = cleanDigits.length === 10 ? `977${cleanDigits}` : cleanDigits;
+  
   const message = encodeURIComponent(
     customMessage ||
       'Hello U Drive! Every Ride A New Story. I am interested in renting a vehicle in Nepal. Could you please share availability and rates?'
@@ -26,7 +30,7 @@ export default function WhatsAppFloat({ customMessage, phoneNumber }: WhatsAppFl
   };
 
   const whatsappUrl = configuredNumber
-    ? `https://wa.me/${configuredNumber.replace(/[^0-9]/g, '')}?text=${message}`
+    ? `https://wa.me/${configuredNumber}?text=${message}`
     : '#';
 
   return (
