@@ -51,7 +51,7 @@ export default async function HomePage() {
             href="/vehicles"
             className="inline-flex items-center gap-2 text-sm font-bold text-[#080A0D] hover:text-[#28618F] group transition-colors"
           >
-            <span>View All 19 Vehicles</span>
+            <span>View All Vehicles</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#28618F]" />
           </Link>
         </div>
@@ -68,7 +68,7 @@ export default async function HomePage() {
             href="/vehicles"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#080A0D] hover:bg-[#12161F] text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all"
           >
-            <span>Browse Complete Fleet (19 Models)</span>
+            <span>Browse Complete Fleet</span>
             <ChevronRight className="w-4 h-4 text-[#FFD83D]" />
           </Link>
         </div>
@@ -240,7 +240,7 @@ export default async function HomePage() {
                 href="/pricing"
                 className="bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] font-bold px-7 py-3.5 rounded-xl text-sm transition-all flex items-center gap-2 shadow-lg shadow-[#FFD83D]/15 font-heading"
               >
-                <span>View Complete Rate Table for 19 Cars</span>
+                <span>View Complete Rate Table</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

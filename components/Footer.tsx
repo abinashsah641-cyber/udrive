@@ -99,13 +99,13 @@ export default function Footer() {
               <li>
                 <Link href="/vehicles?category=electric" className="hover:text-[#FFD83D] transition-colors flex items-center gap-1.5">
                   <Zap className="w-3.5 h-3.5 text-[#FFD83D]" />
-                  <span>Electric Vehicles (13)</span>
+                  <span>Electric Vehicles</span>
                 </Link>
               </li>
               <li>
                 <Link href="/vehicles?category=fuel" className="hover:text-[#FFD83D] transition-colors flex items-center gap-1.5">
                   <Fuel className="w-3.5 h-3.5 text-[#60A5FA]" />
-                  <span>Fuel Vehicles (6)</span>
+                  <span>Fuel Vehicles</span>
                 </Link>
               </li>
               <li>

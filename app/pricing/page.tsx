@@ -6,7 +6,7 @@ import PricingClient from './PricingClient';
 export const metadata: Metadata = {
   title: 'Pricing & Rental Packages | UDrive Rental Service Nepal',
   description:
-    'Transparent vehicle rental rates in Nepal. 19 vehicles with verified daily, 7-day, 15-day, and 30-day package pricing in Nepalese Rupees (NPR).',
+    'Transparent vehicle rental rates in Nepal with verified daily, 7-day, 15-day, and 30-day package pricing in Nepalese Rupees (NPR).',
 };
 
 

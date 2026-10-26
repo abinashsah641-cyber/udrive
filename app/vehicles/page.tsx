@@ -6,7 +6,7 @@ import VehiclesClient from './VehiclesClient';
 export const metadata: Metadata = {
   title: 'All Vehicles Fleet | U Drive Nepal',
   description:
-    'Browse our complete fleet of 19 vehicles in Nepal. 13 electric vehicles and 6 fuel cars with transparent daily, weekly, 15-day, and 30-day rates.',
+    'Browse our complete fleet of electric vehicles and fuel cars with transparent daily, weekly, 15-day, and 30-day rates in Nepal.',
 };
 
 

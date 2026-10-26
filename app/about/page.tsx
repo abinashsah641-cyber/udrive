@@ -60,7 +60,7 @@ export default function AboutPage() {
             href="/vehicles"
             className="inline-block bg-[#080A0D] hover:bg-[#12161F] text-[#FFD83D] font-bold text-xs px-6 py-3 rounded-xl transition-all font-heading shadow-md"
           >
-            Explore the 19 Vehicles
+            Explore Our Fleet
           </Link>
         </div>
       </div>

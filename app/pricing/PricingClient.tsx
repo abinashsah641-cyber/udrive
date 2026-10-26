@@ -110,7 +110,7 @@ export default function PricingClient({ vehicles }: PricingClientProps) {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="font-heading text-2xl font-bold text-[#080A0D] tracking-tight">
-            Official Published Rate Schedule (19 Models)
+            Official Published Rate Schedule
           </h2>
           <p className="text-slate-500 text-xs sm:text-sm mt-1">
             Exact prices in Nepalese Rupees (NPR). All package discounts already incorporated.
@@ -119,9 +119,9 @@ export default function PricingClient({ vehicles }: PricingClientProps) {
 
         <div className="flex items-center gap-1.5 p-1 bg-slate-200/80 rounded-xl">
           {[
-            { id: 'all', label: 'All Fleet (19)' },
-            { id: 'electric', label: 'Electric (13)' },
-            { id: 'fuel', label: 'Fuel (6)' },
+            { id: 'all', label: 'All Fleet' },
+            { id: 'electric', label: 'Electric' },
+            { id: 'fuel', label: 'Fuel' },
           ].map((tab) => (
             <button
               key={tab.id}

@@ -42,7 +42,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
             >
               <Car className="w-4 h-4 text-slate-400" />
-              <span>Manage Vehicles (19)</span>
+              <span>Manage Vehicles</span>
             </Link>
 
             <Link

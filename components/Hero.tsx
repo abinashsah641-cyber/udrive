@@ -20,8 +20,6 @@ import {
   Sparkles,
   ChevronLeft,
   ChevronRight,
-  Pause,
-  Play,
 } from 'lucide-react';
 
 const DEFAULT_LOCATIONS = [
@@ -32,7 +30,7 @@ const DEFAULT_LOCATIONS = [
   'Lakeside, Pokhara',
 ];
 
-const AUTO_SCROLL_INTERVAL = 5500; // 5.5s
+const AUTO_MOVE_INTERVAL = 4000; // 4 seconds per slide for lively auto-move
 
 export default function Hero() {
   const router = useRouter();
@@ -40,7 +38,6 @@ export default function Hero() {
   // Full Screen Slider State
   const [filter, setFilter] = useState<'all' | 'electric' | 'fuel'>('all');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
 
   // Filtered vehicles
@@ -63,16 +60,15 @@ export default function Hero() {
     setCurrentIndex((prev) => (prev - 1 + filteredVehicles.length) % filteredVehicles.length);
   }, [filteredVehicles.length]);
 
-  // Auto-scroll effect
+  // Continuous auto-move through all vehicles (does not pause on mouse hover)
   useEffect(() => {
-    if (isPaused) return;
     const timer = setInterval(() => {
       handleNext();
-    }, AUTO_SCROLL_INTERVAL);
+    }, AUTO_MOVE_INTERVAL);
     return () => clearInterval(timer);
-  }, [isPaused, handleNext]);
+  }, [handleNext]);
 
-  // Touch swipe handling
+  // Touch swipe handling for mobile
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.touches[0].clientX);
   };
@@ -127,35 +123,44 @@ export default function Hero() {
   return (
     <section className="relative bg-[#080A0D] text-white overflow-hidden">
       {/* =========================================================================
-          FULL-SCREEN CINEMATIC HERO VEHICLE SHOWCASE
-          The car image fills the entire full-screen hero canvas!
+          FULL-SCREEN CINEMATIC AUTO-MOVING HERO VEHICLE SHOWCASE
+          All car images automove smoothly across the full screen!
          ========================================================================= */}
       <div
         className="relative w-full min-h-[82vh] sm:min-h-[88vh] lg:min-h-[92vh] flex flex-col justify-between overflow-hidden select-none"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Full-Screen Vehicle Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            key={activeVehicle.image}
-            src={activeVehicle.image}
-            alt={`${activeVehicle.name} - U Drive Vehicle Rental Nepal`}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center transition-all duration-1000 ease-out scale-[1.01]"
-          />
+        {/* Full-Screen Vehicle Background Images with Smooth Cross-Fade */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {filteredVehicles.map((vehicle, idx) => {
+            const isActive = idx === currentIndex;
+            return (
+              <div
+                key={vehicle.id}
+                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                  isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                }`}
+              >
+                <Image
+                  src={vehicle.image}
+                  alt={`${vehicle.name} - U Drive Vehicle Rental Nepal`}
+                  fill
+                  priority={idx < 2}
+                  sizes="100vw"
+                  className="object-cover object-center scale-[1.01]"
+                />
+              </div>
+            );
+          })}
 
           {/* Deep Cinematic Gradient Overlays for High Text Contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080A0D] via-[#080A0D]/55 to-transparent z-10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#080A0D]/95 via-[#080A0D]/65 to-transparent max-w-4xl z-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#080A0D]/80 via-transparent to-transparent h-44 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080A0D] via-[#080A0D]/55 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080A0D]/95 via-[#080A0D]/65 to-transparent max-w-4xl z-10 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#080A0D]/80 via-transparent to-transparent h-44 z-10 pointer-events-none" />
         </div>
 
-        {/* Top Floating Controls Bar: Fleet Filters + Slide Counter + Auto-scroll toggle */}
+        {/* Top Floating Controls Bar: Fleet Filters & Live Auto Status */}
         <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 flex items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#080A0D]/80 backdrop-blur-md border border-[#242933] text-xs font-medium text-slate-300">
             <span className="w-2 h-2 rounded-full bg-[#FFD83D] animate-pulse" />
@@ -165,60 +170,49 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Category Filter Pills */}
+            {/* Category Filter Pills (No counts) */}
             <div className="flex items-center gap-1 bg-[#080A0D]/85 backdrop-blur-md p-1 rounded-xl border border-[#242933]">
               <button
                 type="button"
                 onClick={() => setFilter('all')}
-                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
+                className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
                   filter === 'all'
                     ? 'bg-[#FFD83D] text-[#080A0D] shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                All (19)
+                All Fleet
               </button>
               <button
                 type="button"
                 onClick={() => setFilter('electric')}
-                className={`px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
+                className={`px-3 py-1 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
                   filter === 'electric'
                     ? 'bg-[#FFD83D] text-[#080A0D] shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
                 <Zap className="w-3 h-3 text-[#28618F]" />
-                <span>EVs (13)</span>
+                <span>Electric</span>
               </button>
               <button
                 type="button"
                 onClick={() => setFilter('fuel')}
-                className={`px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
+                className={`px-3 py-1 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
                   filter === 'fuel'
                     ? 'bg-[#FFD83D] text-[#080A0D] shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
                 <Fuel className="w-3 h-3 text-slate-400" />
-                <span>Fuel (6)</span>
+                <span>Fuel</span>
               </button>
             </div>
 
-            {/* Slide Counter & Pause Button */}
-            <div className="flex items-center gap-1.5 bg-[#080A0D]/85 backdrop-blur-md px-2.5 py-1 rounded-xl border border-[#242933] text-xs font-mono font-semibold text-slate-300">
-              <span className="text-[#FFD83D] font-bold">
-                {String(currentIndex + 1).padStart(2, '0')}
-              </span>
-              <span className="text-slate-600">/</span>
-              <span>{String(filteredVehicles.length).padStart(2, '0')}</span>
-              <button
-                type="button"
-                onClick={() => setIsPaused(!isPaused)}
-                className="ml-1 text-slate-400 hover:text-white"
-                title={isPaused ? 'Resume auto-scroll' : 'Pause auto-scroll'}
-              >
-                {isPaused ? <Play className="w-3 h-3 text-[#FFD83D]" /> : <Pause className="w-3 h-3" />}
-              </button>
+            {/* Live Auto Status Badge */}
+            <div className="hidden sm:flex items-center gap-2 bg-[#080A0D]/85 backdrop-blur-md px-3 py-1 rounded-xl border border-[#242933] text-xs font-medium text-slate-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+              <span className="text-slate-300 text-[11px] font-semibold">Auto-Moving Showcase</span>
             </div>
           </div>
         </div>
@@ -234,7 +228,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-slate-200 text-base sm:text-xl font-normal leading-relaxed max-w-xl">
-              Find the right car for every journey. Explore 19 premium electric vehicles and dependable fuel cars with transparent published rental packages across Nepal.
+              Find the right car for every journey. Explore premium electric vehicles and dependable fuel cars with transparent published rental packages across Nepal.
             </p>
 
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
@@ -242,7 +236,7 @@ export default function Hero() {
                 href="/vehicles"
                 className="bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] font-bold text-sm sm:text-base px-6 sm:px-7 py-3 rounded-xl shadow-xl shadow-[#FFD83D]/20 hover:scale-[1.02] transition-all flex items-center gap-2 group font-heading"
               >
-                <span>Explore Fleet (19 Models)</span>
+                <span>Explore Our Fleet</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
 
@@ -329,17 +323,17 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Dots Pagination Below Card */}
-          <div className="flex items-center justify-center gap-1.5 mt-3 flex-wrap">
+          {/* Minimalist Dots Indicator */}
+          <div className="flex items-center justify-center gap-1 mt-3 flex-wrap">
             {filteredVehicles.map((v, i) => (
               <button
                 key={v.id}
                 type="button"
                 onClick={() => setCurrentIndex(i)}
-                className={`h-1.5 rounded-full transition-all ${
+                className={`h-1 rounded-full transition-all ${
                   i === currentIndex
-                    ? 'w-7 bg-[#FFD83D]'
-                    : 'w-1.5 bg-[#242933] hover:bg-slate-400'
+                    ? 'w-6 bg-[#FFD83D]'
+                    : 'w-1 bg-[#242933] hover:bg-slate-400'
                 }`}
                 title={v.name}
                 aria-label={`Go to ${v.name}`}
@@ -373,8 +367,8 @@ export default function Hero() {
             key={currentIndex}
             className="h-full bg-gradient-to-r from-[#28618F] via-[#FFD83D] to-[#FFD83D]"
             style={{
-              animation: isPaused ? 'none' : `progressAnim ${AUTO_SCROLL_INTERVAL}ms linear`,
-              width: isPaused ? '100%' : '100%',
+              animation: `progressAnim ${AUTO_MOVE_INTERVAL}ms linear`,
+              width: '100%',
             }}
           />
         </div>
@@ -396,12 +390,12 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Category Filter Tabs */}
+            {/* Category Filter Tabs (No numbers) */}
             <div className="flex flex-wrap gap-1.5 p-1 bg-slate-100 rounded-xl">
               {[
-                { id: 'all', label: 'All Fleet (19)' },
-                { id: 'electric', label: 'Electric Vehicles (13)' },
-                { id: 'fuel', label: 'Fuel / Manual (6)' },
+                { id: 'all', label: 'All Fleet' },
+                { id: 'electric', label: 'Electric Vehicles' },
+                { id: 'fuel', label: 'Fuel Vehicles' },
               ].map((tab) => (
                 <button
                   key={tab.id}

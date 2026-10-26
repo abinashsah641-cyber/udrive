@@ -341,7 +341,7 @@ export default function BookingWizard({ vehicles }: BookingWizardProps) {
                 Step 2: Choose Your Vehicle
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                Showing all 19 vehicles with exact pricing calculated for {rentalDays} days.
+                Showing all available vehicles with exact pricing calculated for {rentalDays} days.
               </p>
             </div>
             <span className="text-xs font-mono font-bold bg-slate-100 text-slate-800 px-3 py-1.5 rounded-lg">
