@@ -20,6 +20,7 @@ const DEFAULT_SETTINGS: SiteSettings = {
   whatsappNumber: '9800899505', // Official WhatsApp line
   email: 'udriverentalcarservice@gmail.com',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61584871988112',
+  instagramUrl: 'https://www.instagram.com/udrivve?utm_source=ig_web_button_share_sheet&srtk=ZDNlZDc0MzIxNw==',
   pickupLocations: [
     'Tribhuvan International Airport (TIA), Kathmandu',
     'Thamel, Kathmandu',

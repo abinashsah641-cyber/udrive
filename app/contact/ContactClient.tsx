@@ -93,20 +93,32 @@ export default function ContactClient({ settings }: ContactClientProps) {
             </div>
           </div>
 
-          {/* Facebook Link */}
-          <div className="pt-4 border-t border-[#242933]">
-            <span className="text-[11px] uppercase font-bold text-slate-400 block mb-2">
-              Official Social Profile
+          {/* Social Profiles */}
+          <div className="pt-4 border-t border-[#242933] space-y-2">
+            <span className="text-[11px] uppercase font-bold text-slate-400 block">
+              Official Social Profiles
             </span>
-            <a
-              href={settings.facebookUrl || 'https://www.facebook.com/profile.php?id=61584871988112'}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#28618F]/20 hover:bg-[#28618F]/30 text-[#60A5FA] border border-[#28618F]/40 text-xs font-semibold transition-all group"
-            >
-              <span>Follow U Drive on Facebook</span>
-              <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-            </a>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <a
+                href={settings.facebookUrl || 'https://www.facebook.com/profile.php?id=61584871988112'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-[#28618F]/20 hover:bg-[#28618F]/30 text-[#60A5FA] border border-[#28618F]/40 text-xs font-semibold transition-all group"
+              >
+                <span>Facebook Page</span>
+                <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+              <a
+                href={settings.instagramUrl || 'https://www.instagram.com/udrivve?utm_source=ig_web_button_share_sheet&srtk=ZDNlZDc0MzIxNw=='}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-pink-500/15 hover:bg-pink-500/25 text-pink-400 border border-pink-500/30 text-xs font-semibold transition-all group"
+              >
+                <span>Instagram @udrivve</span>
+                <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+            </div>
           </div>
 
           {/* Pickup locations */}

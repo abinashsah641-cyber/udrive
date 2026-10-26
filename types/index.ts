@@ -85,6 +85,7 @@ export interface SiteSettings {
   whatsappNumber: string; // E.g. "97798XXXXXXXX" or empty if unconfigured
   email: string;
   facebookUrl: string;
+  instagramUrl?: string;
   pickupLocations: string[];
   minimumRentalDays: number;
 }
