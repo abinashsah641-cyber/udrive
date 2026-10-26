@@ -16,9 +16,9 @@
       "weeklyRate": 43225,
       "fifteenDayRate": 87750,
       "monthlyRate": 165750,
-      "image": "/images/vehicles/byd-atto-1.svg",
+      "image": "/images/vehicles/byd-atto-1.jpg",
       "gallery": [
-        "/images/vehicles/byd-atto-1.svg"
+        "/images/vehicles/byd-atto-1.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -62,9 +62,9 @@
       "weeklyRate": 59850,
       "fifteenDayRate": 121500,
       "monthlyRate": 229500,
-      "image": "/images/vehicles/byd-atto-2.svg",
+      "image": "/images/vehicles/byd-atto-2.jpg",
       "gallery": [
-        "/images/vehicles/byd-atto-2.svg"
+        "/images/vehicles/byd-atto-2.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -108,9 +108,9 @@
       "weeklyRate": 63175,
       "fifteenDayRate": 128250,
       "monthlyRate": 242250,
-      "image": "/images/vehicles/byd-atto-3.svg",
+      "image": "/images/vehicles/byd-atto-3.jpg",
       "gallery": [
-        "/images/vehicles/byd-atto-3.svg"
+        "/images/vehicles/byd-atto-3.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -154,9 +154,9 @@
       "weeklyRate": 43225,
       "fifteenDayRate": 87750,
       "monthlyRate": 165750,
-      "image": "/images/vehicles/nevo-e5.svg",
+      "image": "/images/vehicles/nevo-e5.jpg",
       "gallery": [
-        "/images/vehicles/nevo-e5.svg"
+        "/images/vehicles/nevo-e5.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -201,9 +201,9 @@
       "weeklyRate": 63175,
       "fifteenDayRate": 128250,
       "monthlyRate": 242250,
-      "image": "/images/vehicles/omoda-e5.svg",
+      "image": "/images/vehicles/omoda-e5.jpg",
       "gallery": [
-        "/images/vehicles/omoda-e5.svg"
+        "/images/vehicles/omoda-e5.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -247,9 +247,9 @@
       "weeklyRate": 66500,
       "fifteenDayRate": 135000,
       "monthlyRate": 255000,
-      "image": "/images/vehicles/omoda-e5-pro.svg",
+      "image": "/images/vehicles/omoda-e5-pro.jpg",
       "gallery": [
-        "/images/vehicles/omoda-e5-pro.svg"
+        "/images/vehicles/omoda-e5-pro.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -293,9 +293,9 @@
       "weeklyRate": 99750,
       "fifteenDayRate": 202500,
       "monthlyRate": 382500,
-      "image": "/images/vehicles/ridard-pickup.svg",
+      "image": "/images/vehicles/ridard-pickup.jpg",
       "gallery": [
-        "/images/vehicles/ridard-pickup.svg"
+        "/images/vehicles/ridard-pickup.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -340,9 +340,9 @@
       "weeklyRate": 66500,
       "fifteenDayRate": 135000,
       "monthlyRate": 255000,
-      "image": "/images/vehicles/jaeco-j5.svg",
+      "image": "/images/vehicles/jaeco-j5.jpg",
       "gallery": [
-        "/images/vehicles/jaeco-j5.svg"
+        "/images/vehicles/jaeco-j5.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -387,9 +387,9 @@
       "weeklyRate": 56525,
       "fifteenDayRate": 114750,
       "monthlyRate": 216750,
-      "image": "/images/vehicles/naami-vigo.svg",
+      "image": "/images/vehicles/naami-vigo.jpg",
       "gallery": [
-        "/images/vehicles/naami-vigo.svg"
+        "/images/vehicles/naami-vigo.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -434,9 +434,9 @@
       "weeklyRate": 46550,
       "fifteenDayRate": 94500,
       "monthlyRate": 178500,
-      "image": "/images/vehicles/naami-box.svg",
+      "image": "/images/vehicles/naami-box.jpg",
       "gallery": [
-        "/images/vehicles/naami-box.svg"
+        "/images/vehicles/naami-box.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -481,9 +481,9 @@
       "weeklyRate": 66500,
       "fifteenDayRate": 135000,
       "monthlyRate": 255000,
-      "image": "/images/vehicles/i-caur.svg",
+      "image": "/images/vehicles/i-caur.jpg",
       "gallery": [
-        "/images/vehicles/i-caur.svg"
+        "/images/vehicles/i-caur.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -528,9 +528,9 @@
       "weeklyRate": 59850,
       "fifteenDayRate": 121500,
       "monthlyRate": 229500,
-      "image": "/images/vehicles/deepal-s05.svg",
+      "image": "/images/vehicles/deepal-s05.jpg",
       "gallery": [
-        "/images/vehicles/deepal-s05.svg"
+        "/images/vehicles/deepal-s05.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -574,9 +574,9 @@
       "weeklyRate": 86450,
       "fifteenDayRate": 175500,
       "monthlyRate": 331500,
-      "image": "/images/vehicles/deepal-s07.svg",
+      "image": "/images/vehicles/deepal-s07.jpg",
       "gallery": [
-        "/images/vehicles/deepal-s07.svg"
+        "/images/vehicles/deepal-s07.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -620,9 +620,9 @@
       "weeklyRate": 43225,
       "fifteenDayRate": 87750,
       "monthlyRate": 165750,
-      "image": "/images/vehicles/grand-i10.svg",
+      "image": "/images/vehicles/grand-i10.jpg",
       "gallery": [
-        "/images/vehicles/grand-i10.svg"
+        "/images/vehicles/grand-i10.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -666,9 +666,9 @@
       "weeklyRate": 46550,
       "fifteenDayRate": 94500,
       "monthlyRate": 178500,
-      "image": "/images/vehicles/nissan-magnite.svg",
+      "image": "/images/vehicles/nissan-magnite.jpg",
       "gallery": [
-        "/images/vehicles/nissan-magnite.svg"
+        "/images/vehicles/nissan-magnite.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -712,9 +712,9 @@
       "weeklyRate": 33250,
       "fifteenDayRate": 67500,
       "monthlyRate": 127500,
-      "image": "/images/vehicles/hyundai-i20.svg",
+      "image": "/images/vehicles/hyundai-i20.jpg",
       "gallery": [
-        "/images/vehicles/hyundai-i20.svg"
+        "/images/vehicles/hyundai-i20.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -758,9 +758,9 @@
       "weeklyRate": 33250,
       "fifteenDayRate": 67500,
       "monthlyRate": 127500,
-      "image": "/images/vehicles/vw-polo.svg",
+      "image": "/images/vehicles/vw-polo.jpg",
       "gallery": [
-        "/images/vehicles/vw-polo.svg"
+        "/images/vehicles/vw-polo.jpg"
       ],
       "isAvailable": true,
       "isFeatured": false,
@@ -804,9 +804,9 @@
       "weeklyRate": 49875,
       "fifteenDayRate": 101250,
       "monthlyRate": 191250,
-      "image": "/images/vehicles/kia-sonet.svg",
+      "image": "/images/vehicles/kia-sonet.jpg",
       "gallery": [
-        "/images/vehicles/kia-sonet.svg"
+        "/images/vehicles/kia-sonet.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -850,9 +850,9 @@
       "weeklyRate": 113050,
       "fifteenDayRate": 229500,
       "monthlyRate": 433500,
-      "image": "/images/vehicles/toyota-hilux-4x4.svg",
+      "image": "/images/vehicles/toyota-hilux-4x4.jpg",
       "gallery": [
-        "/images/vehicles/toyota-hilux-4x4.svg"
+        "/images/vehicles/toyota-hilux-4x4.jpg"
       ],
       "isAvailable": true,
       "isFeatured": true,
@@ -882,6 +882,54 @@
     }
   ],
   "bookings": [
+    {
+      "id": "bk_1793012214148_ckv4",
+      "reference": "UDR-2026-9FPGX",
+      "vehicleId": "byd-atto-2",
+      "vehicleName": "BYD Atto 2",
+      "vehicleImage": "/images/vehicles/byd-atto-2.jpg",
+      "customerName": "Aarav Adhikari",
+      "customerPhone": "9841234567",
+      "customerEmail": "aarav@example.com",
+      "notes": "Please arrange airport pickup at TIA Terminal 1",
+      "preferredContact": "whatsapp",
+      "pickupLocation": "Tribhuvan International Airport (TIA), Kathmandu",
+      "returnLocation": "Tribhuvan International Airport (TIA), Kathmandu",
+      "pickupDate": "2026-12-01",
+      "pickupTime": "10:00",
+      "returnDate": "2026-12-23",
+      "returnTime": "10:00",
+      "rentalDays": 22,
+      "pricing": {
+        "totalDays": 22,
+        "dailyRate": 9000,
+        "totalBeforeDiscount": 198000,
+        "subtotal": 181350,
+        "savings": 16650,
+        "savingsPercent": 8,
+        "breakdown": [
+          {
+            "packageType": "fifteen_day",
+            "label": "15-Day Package",
+            "count": 1,
+            "daysCovered": 15,
+            "unitRate": 121500,
+            "subtotal": 121500
+          },
+          {
+            "packageType": "weekly",
+            "label": "7-Day Weekly Package",
+            "count": 1,
+            "daysCovered": 7,
+            "unitRate": 59850,
+            "subtotal": 59850
+          }
+        ]
+      },
+      "status": "confirmed",
+      "createdAt": "2026-10-26T10:56:54.148Z",
+      "updatedAt": "2026-10-26T10:56:54.179Z"
+    },
     {
       "id": "bk_1793011594298_e7q4",
       "reference": "UDR-2026-EHIH2",

@@ -372,12 +372,13 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/3 aspect-[4/3] rounded-2xl bg-midnight-card border border-slate-800 p-4 flex items-center justify-center">
+          <div className="w-full lg:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 relative">
             <img
-              src="/images/vehicles/toyota-hilux-4x4.svg"
+              src="/images/vehicles/toyota-hilux-4x4.jpg"
               alt="Toyota Hilux 4x4 310mm Ground Clearance"
-              className="w-full h-full object-contain filter drop-shadow-xl"
+              className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
       </section>

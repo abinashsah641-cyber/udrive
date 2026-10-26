@@ -119,7 +119,7 @@ export default function VehicleDetailClient({
         {/* Left Column (Images, Specs, Details) */}
         <div className="lg:col-span-7 space-y-8">
           {/* Main Visual Display */}
-          <div className="relative rounded-3xl bg-midnight border border-slate-800 p-6 sm:p-10 shadow-xl overflow-hidden aspect-[16/10] flex items-center justify-center">
+          <div className="relative rounded-3xl bg-midnight border border-slate-800 shadow-xl overflow-hidden aspect-[16/10]">
             {/* Badges */}
             <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2">
               <span
@@ -133,11 +133,11 @@ export default function VehicleDetailClient({
                 {isElectric ? 'Electric Vehicle' : 'Fuel Vehicle'}
               </span>
 
-              <span className="bg-slate-800 text-slate-200 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-700">
+              <span className="bg-slate-900/80 backdrop-blur-sm text-slate-200 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-700">
                 {vehicle.bodyStyle}
               </span>
 
-              <span className="bg-slate-800 text-slate-300 text-xs font-mono px-2.5 py-1 rounded-md border border-slate-700">
+              <span className="bg-slate-900/80 backdrop-blur-sm text-slate-300 text-xs font-mono px-2.5 py-1 rounded-md border border-slate-700">
                 {vehicle.year} Model
               </span>
             </div>
@@ -160,13 +160,14 @@ export default function VehicleDetailClient({
               </span>
             </div>
 
-            {/* Large Vehicle Artwork */}
-            <div className="relative w-full h-full flex items-center justify-center">
+            {/* Real Vehicle Photograph */}
+            <div className="relative w-full h-full overflow-hidden">
               <img
                 src={vehicle.image || '/images/vehicles/fallback-car.svg'}
                 alt={`${vehicle.name} ${vehicle.color}`}
-                className="w-full h-full object-contain filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)]"
+                className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 pointer-events-none" />
             </div>
           </div>
 

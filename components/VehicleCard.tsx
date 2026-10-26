@@ -19,7 +19,7 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
   return (
     <div className="group bg-white rounded-2xl border border-slate-200/80 hover:border-slate-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
       {/* Vehicle Media Header */}
-      <div className="relative aspect-[16/10] bg-gradient-to-b from-slate-900 to-midnight overflow-hidden flex items-center justify-center p-4">
+      <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
         {/* Badges Overlay */}
         <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-1.5 items-center">
           <span
@@ -33,11 +33,11 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
             {isElectric ? 'Electric' : 'Fuel'}
           </span>
 
-          <span className="bg-slate-800/80 backdrop-blur-sm text-slate-200 text-[11px] font-medium px-2 py-0.5 rounded-md border border-slate-700">
+          <span className="bg-slate-900/80 backdrop-blur-sm text-slate-200 text-[11px] font-medium px-2 py-0.5 rounded-md border border-slate-700">
             {vehicle.bodyStyle}
           </span>
 
-          <span className="bg-slate-800/80 backdrop-blur-sm text-slate-300 text-[11px] font-mono px-2 py-0.5 rounded-md border border-slate-700">
+          <span className="bg-slate-900/80 backdrop-blur-sm text-slate-300 text-[11px] font-mono px-2 py-0.5 rounded-md border border-slate-700">
             {vehicle.year}
           </span>
         </div>
@@ -60,18 +60,20 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
           </span>
         </div>
 
-        {/* Vehicle Image */}
-        <div className="relative w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+        {/* Vehicle Real Photo with smooth zoom */}
+        <div className="relative w-full h-full overflow-hidden">
           <img
             src={vehicle.image || '/images/vehicles/fallback-car.svg'}
             alt={`${vehicle.name} ${vehicle.color}`}
-            className="w-full h-full object-contain drop-shadow-2xl"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading={priority ? 'eager' : 'lazy'}
           />
+          {/* Subtle bottom shadow vignette */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
         </div>
 
-        {/* Subtle Watermark on card */}
-        <span className="absolute bottom-2 right-3 text-[10px] text-slate-500 font-mono opacity-60">
+        {/* Subdued color label */}
+        <span className="absolute bottom-2 right-3 text-[10px] text-white/90 font-mono font-medium drop-shadow-md">
           {vehicle.color}
         </span>
       </div>
