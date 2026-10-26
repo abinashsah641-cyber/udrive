@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Search, RotateCcw, Filter, SlidersHorizontal } from 'lucide-react';
+import { Search, RotateCcw, Filter } from 'lucide-react';
 
 interface FilterBarProps {
   totalCount: number;
@@ -42,7 +42,7 @@ export default function FilterBar({
     sortBy !== 'featured';
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm space-y-4">
+    <div className="bg-white rounded-2xl border border-[#E4E5E2] p-5 shadow-sm space-y-4">
       {/* Top Search & Results Counter */}
       <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
         {/* Search input */}
@@ -53,7 +53,7 @@ export default function FilterBar({
             placeholder="Search by model name, color, year..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-midnight transition-colors"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[#E4E5E2] bg-[#F7F7F4] focus:bg-white text-sm text-[#080A0D] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#080A0D] transition-colors"
           />
           {searchQuery && (
             <button
@@ -68,13 +68,13 @@ export default function FilterBar({
         {/* Counter & Sort dropdown */}
         <div className="flex items-center justify-between md:justify-end gap-3">
           <span className="text-xs font-semibold text-slate-500">
-            Showing <strong className="text-midnight">{filteredCount}</strong> of {totalCount} cars
+            Showing <strong className="text-[#080A0D]">{filteredCount}</strong> of {totalCount} cars
           </span>
 
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-midnight"
+            className="bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
           >
             <option value="featured">Featured First</option>
             <option value="price-asc">Price: Low to High</option>
@@ -100,12 +100,12 @@ export default function FilterBar({
         {/* Category Pills */}
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400 mr-1 flex items-center gap-1">
-            <Filter className="w-3 h-3" />
+            <Filter className="w-3 h-3 text-[#28618F]" />
             Power:
           </span>
           {[
             { id: 'all', label: 'All Fleet' },
-            { id: 'electric', label: 'Electric' },
+            { id: 'electric', label: 'Electric Vehicles' },
             { id: 'fuel', label: 'Fuel / Petrol' },
           ].map((pill) => (
             <button
@@ -113,7 +113,7 @@ export default function FilterBar({
               onClick={() => setCategory(pill.id)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 category === pill.id
-                  ? 'bg-midnight text-white shadow-sm'
+                  ? 'bg-[#080A0D] text-[#FFD83D] shadow-sm'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -138,7 +138,7 @@ export default function FilterBar({
               onClick={() => setBodyStyle(style.id)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 bodyStyle === style.id
-                  ? 'bg-electric text-midnight shadow-sm'
+                  ? 'bg-[#FFD83D] text-[#080A0D] shadow-sm font-bold'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -159,9 +159,9 @@ export default function FilterBar({
             step="500"
             value={maxPrice}
             onChange={(e) => setMaxPrice(Number(e.target.value))}
-            className="flex-1 accent-midnight"
+            className="flex-1 accent-[#080A0D]"
           />
-          <span className="font-mono font-bold text-midnight whitespace-nowrap">
+          <span className="font-mono font-bold text-[#080A0D] whitespace-nowrap">
             NPR {maxPrice.toLocaleString('en-IN')}
           </span>
         </div>

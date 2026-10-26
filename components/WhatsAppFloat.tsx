@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MessageCircle, X, ShieldAlert, ExternalLink } from 'lucide-react';
+import { MessageCircle, X, ShieldAlert } from 'lucide-react';
 
 interface WhatsAppFloatProps {
   customMessage?: string;
@@ -15,7 +15,7 @@ export default function WhatsAppFloat({ customMessage, phoneNumber }: WhatsAppFl
   const configuredNumber = phoneNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '';
   const message = encodeURIComponent(
     customMessage ||
-      'Hello UDrive Rental Service! I am interested in renting a vehicle in Nepal. Could you please share availability and assistance?'
+      'Hello U Drive! Every Ride A New Story. I am interested in renting a vehicle in Nepal. Could you please share availability and rates?'
   );
 
   const handleClick = (e: React.MouseEvent) => {
@@ -33,11 +33,11 @@ export default function WhatsAppFloat({ customMessage, phoneNumber }: WhatsAppFl
     <>
       <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">
         {showConfigNotice && (
-          <div className="max-w-xs bg-midnight-card border border-amber-500/30 p-4 rounded-2xl shadow-2xl text-slate-200 text-xs animate-in fade-in slide-in-from-bottom-2">
+          <div className="max-w-xs bg-[#12161F] border border-[#FFD83D]/30 p-4 rounded-2xl shadow-2xl text-slate-200 text-xs animate-in fade-in slide-in-from-bottom-2">
             <div className="flex items-start justify-between gap-2 mb-2">
-              <span className="font-semibold text-amber-400 flex items-center gap-1.5">
+              <span className="font-semibold text-[#FFD83D] flex items-center gap-1.5">
                 <ShieldAlert className="w-4 h-4" />
-                WhatsApp Configuration
+                WhatsApp Direct Link
               </span>
               <button
                 onClick={() => setShowConfigNotice(false)}
@@ -48,9 +48,9 @@ export default function WhatsAppFloat({ customMessage, phoneNumber }: WhatsAppFl
               </button>
             </div>
             <p className="leading-relaxed text-slate-300">
-              The official business WhatsApp number has not yet been specified by the owner in the environment settings. Administrators can set this anytime in the{' '}
-              <a href="/admin/settings" className="text-electric underline font-medium">
-                Admin Settings
+              The official business WhatsApp number can be configured by the owner in the environment variables (<code className="text-[#FFD83D]">NEXT_PUBLIC_WHATSAPP_NUMBER</code>) or in the{' '}
+              <a href="/admin" className="text-[#FFD83D] underline font-medium">
+                Admin Dashboard
               </a>.
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function WhatsAppFloat({ customMessage, phoneNumber }: WhatsAppFl
           rel={configuredNumber ? 'noopener noreferrer' : undefined}
           onClick={handleClick}
           className="flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-3 rounded-full shadow-xl shadow-[#25D366]/25 hover:scale-105 active:scale-95 transition-all font-medium text-sm group"
-          aria-label="Chat with UDrive on WhatsApp"
+          aria-label="Chat with U Drive on WhatsApp"
         >
           <MessageCircle className="w-5 h-5 fill-current" />
           <span className="hidden sm:inline font-semibold">WhatsApp Assistance</span>

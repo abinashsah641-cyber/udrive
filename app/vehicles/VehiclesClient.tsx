@@ -4,7 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { Vehicle } from '@/types';
 import VehicleCard from '@/components/VehicleCard';
 import FilterBar from '@/components/FilterBar';
-import { Zap, Fuel, Car, Info } from 'lucide-react';
+import { Car } from 'lucide-react';
 
 interface VehiclesClientProps {
   initialVehicles: Vehicle[];
@@ -94,17 +94,17 @@ export default function VehiclesClient({
     <div className="space-y-8">
       {/* Trip notification if dates were passed from Hero */}
       {tripInfo?.pickupDate && tripInfo?.returnDate && (
-        <div className="p-4 rounded-2xl bg-midnight text-white border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-md">
+        <div className="p-4 rounded-2xl bg-[#080A0D] text-white border border-[#242933] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-md">
           <div className="flex items-center gap-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-electric animate-ping" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FFD83D] animate-pulse" />
             <span className="text-xs sm:text-sm font-medium">
-              Searching availability for: <strong>{tripInfo.pickupDate}</strong> to{' '}
-              <strong>{tripInfo.returnDate}</strong> ({tripInfo.pickupLocation || 'Kathmandu'})
+              Searching availability for: <strong className="text-[#FFD83D]">{tripInfo.pickupDate}</strong> to{' '}
+              <strong className="text-[#FFD83D]">{tripInfo.returnDate}</strong> ({tripInfo.pickupLocation || 'Kathmandu'})
             </span>
           </div>
           <a
             href="/#booking-widget"
-            className="text-xs font-bold text-electric hover:underline underline-offset-4"
+            className="text-xs font-bold text-[#FFD83D] hover:underline underline-offset-4"
           >
             Adjust Dates
           </a>
@@ -136,11 +136,11 @@ export default function VehiclesClient({
           ))}
         </div>
       ) : (
-        <div className="bg-white rounded-3xl border border-slate-200 p-12 text-center max-w-md mx-auto space-y-4 shadow-sm my-12">
+        <div className="bg-white rounded-3xl border border-[#E4E5E2] p-12 text-center max-w-md mx-auto space-y-4 shadow-sm my-12">
           <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mx-auto text-slate-400">
             <Car className="w-6 h-6" />
           </div>
-          <h3 className="font-heading text-lg font-bold text-midnight">
+          <h3 className="font-heading text-lg font-bold text-[#080A0D]">
             No matching vehicles found
           </h3>
           <p className="text-xs text-slate-500 leading-relaxed">
@@ -148,7 +148,7 @@ export default function VehiclesClient({
           </p>
           <button
             onClick={handleReset}
-            className="bg-midnight hover:bg-slate-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all"
+            className="bg-[#080A0D] hover:bg-slate-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all"
           >
             Reset Filters
           </button>

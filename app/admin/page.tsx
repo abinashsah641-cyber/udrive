@@ -43,7 +43,7 @@ export default async function AdminDashboardPage() {
           </Link>
           <Link
             href="/admin/bookings"
-            className="bg-electric hover:bg-electric-hover text-midnight font-bold text-xs px-4 py-2.5 rounded-xl transition-all font-heading"
+            className="bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] font-bold text-xs px-4 py-2.5 rounded-xl transition-all font-heading"
           >
             View Bookings
           </Link>

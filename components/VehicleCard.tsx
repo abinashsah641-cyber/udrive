@@ -17,27 +17,27 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
   const isAvailable = vehicle.isAvailable && vehicle.maintenanceStatus === 'operational';
 
   return (
-    <div className="group bg-white rounded-2xl border border-slate-200/80 hover:border-slate-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+    <div className="group bg-white rounded-2xl border border-[#E4E5E2] hover:border-[#28618F]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
       {/* Vehicle Media Header */}
-      <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+      <div className="relative aspect-[16/10] bg-[#080A0D] overflow-hidden">
         {/* Badges Overlay */}
         <div className="absolute top-3 left-3 z-10 flex flex-wrap gap-1.5 items-center">
           <span
             className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider ${
               isElectric
-                ? 'bg-electric text-midnight shadow-md shadow-electric/20'
-                : 'bg-amber-400 text-midnight shadow-md shadow-amber-400/20'
+                ? 'bg-[#FFD83D] text-[#080A0D] shadow-md shadow-[#FFD83D]/20'
+                : 'bg-[#28618F] text-white shadow-md shadow-[#28618F]/20'
             }`}
           >
             {isElectric ? <Zap className="w-3 h-3 fill-current" /> : <Fuel className="w-3 h-3" />}
             {isElectric ? 'Electric' : 'Fuel'}
           </span>
 
-          <span className="bg-slate-900/80 backdrop-blur-sm text-slate-200 text-[11px] font-medium px-2 py-0.5 rounded-md border border-slate-700">
+          <span className="bg-[#080A0D]/85 backdrop-blur-sm text-slate-200 text-[11px] font-medium px-2 py-0.5 rounded-md border border-slate-700">
             {vehicle.bodyStyle}
           </span>
 
-          <span className="bg-slate-900/80 backdrop-blur-sm text-slate-300 text-[11px] font-mono px-2 py-0.5 rounded-md border border-slate-700">
+          <span className="bg-[#080A0D]/85 backdrop-blur-sm text-slate-300 text-[11px] font-mono px-2 py-0.5 rounded-md border border-slate-700">
             {vehicle.year}
           </span>
         </div>
@@ -47,8 +47,8 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
           <span
             className={`inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-md border ${
               isAvailable
-                ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/40'
-                : 'bg-rose-950/80 text-rose-300 border-rose-500/40'
+                ? 'bg-emerald-950/85 text-emerald-300 border-emerald-500/40'
+                : 'bg-rose-950/85 text-rose-300 border-rose-500/40'
             }`}
           >
             <span
@@ -62,18 +62,20 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
 
         {/* Vehicle Real Photo with smooth zoom */}
         <div className="relative w-full h-full overflow-hidden">
-          <img
+          <Image
             src={vehicle.image || '/images/vehicles/fallback-car.svg'}
             alt={`${vehicle.name} ${vehicle.color}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading={priority ? 'eager' : 'lazy'}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            priority={priority}
           />
           {/* Subtle bottom shadow vignette */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
         </div>
 
         {/* Subdued color label */}
-        <span className="absolute bottom-2 right-3 text-[10px] text-white/90 font-mono font-medium drop-shadow-md">
+        <span className="absolute bottom-2 right-3 text-[10px] text-white/90 font-mono font-medium drop-shadow-md bg-black/40 px-2 py-0.5 rounded">
           {vehicle.color}
         </span>
       </div>
@@ -84,7 +86,7 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
           {/* Title & Color */}
           <div className="flex items-start justify-between gap-2 mb-2">
             <div>
-              <h3 className="font-heading text-lg font-bold text-midnight tracking-tight group-hover:text-slate-900">
+              <h3 className="font-heading text-lg font-bold text-[#080A0D] tracking-tight group-hover:text-[#28618F] transition-colors">
                 {vehicle.name}
               </h3>
               <p className="text-xs text-slate-500 font-medium">{vehicle.color}</p>
@@ -102,7 +104,7 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
           {/* Key Verified Specs Grid */}
           <div className="grid grid-cols-2 gap-2 my-3 py-2.5 border-y border-slate-100 text-xs">
             <div className="flex items-center gap-1.5 text-slate-600">
-              <Gauge className="w-3.5 h-3.5 text-slate-400" />
+              <Gauge className="w-3.5 h-3.5 text-[#28618F]" />
               <span>
                 <strong className="text-slate-800">
                   {vehicle.rangeVerified ? vehicle.rangeOrMileage : 'Range TBA'}
@@ -110,7 +112,7 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
               </span>
             </div>
             <div className="flex items-center gap-1.5 text-slate-600">
-              <Navigation className="w-3.5 h-3.5 text-slate-400" />
+              <Navigation className="w-3.5 h-3.5 text-[#28618F]" />
               <span>
                 Clearance: <strong className="text-slate-800">{vehicle.groundClearance}</strong>
               </span>
@@ -123,25 +125,25 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
               <span className="text-xs text-slate-500 uppercase font-semibold tracking-wider">
                 Daily Rate
               </span>
-              <span className="font-heading text-xl font-bold text-midnight">
+              <span className="font-heading text-xl font-bold text-[#080A0D]">
                 {formatNPR(vehicle.dailyRate)}
                 <span className="text-xs font-normal text-slate-500"> / day</span>
               </span>
             </div>
 
             {/* Package Rates Grid */}
-            <div className="grid grid-cols-3 gap-1.5 pt-2 text-[11px] bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+            <div className="grid grid-cols-3 gap-1.5 pt-2 text-[11px] bg-[#F7F7F4] p-2.5 rounded-xl border border-[#E4E5E2]">
               <div className="flex flex-col">
-                <span className="text-slate-500 text-[10px]">7 Days (5% off)</span>
+                <span className="text-slate-500 text-[10px]">7 Days (-5%)</span>
                 <span className="font-semibold text-slate-800">{formatNPR(vehicle.weeklyRate)}</span>
               </div>
               <div className="flex flex-col border-x border-slate-200 px-1.5">
-                <span className="text-slate-500 text-[10px]">15 Days (10% off)</span>
+                <span className="text-slate-500 text-[10px]">15 Days (-10%)</span>
                 <span className="font-semibold text-slate-800">{formatNPR(vehicle.fifteenDayRate)}</span>
               </div>
               <div className="flex flex-col text-right">
-                <span className="text-slate-500 text-[10px]">30 Days (15% off)</span>
-                <span className="font-semibold text-emerald-600 font-bold">{formatNPR(vehicle.monthlyRate)}</span>
+                <span className="text-slate-500 text-[10px]">30 Days (-15%)</span>
+                <span className="font-bold text-emerald-700">{formatNPR(vehicle.monthlyRate)}</span>
               </div>
             </div>
           </div>
@@ -151,7 +153,7 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
         <div className="pt-4 flex items-center gap-2">
           <Link
             href={`/vehicles/${vehicle.slug}`}
-            className="flex-1 text-center py-2.5 px-3 rounded-xl border border-slate-200 hover:border-slate-300 text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+            className="flex-1 text-center py-2.5 px-3 rounded-xl border border-[#E4E5E2] hover:border-slate-400 text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors"
           >
             View Details
           </Link>
@@ -160,7 +162,7 @@ export default function VehicleCard({ vehicle, priority = false }: VehicleCardPr
             href={`/booking?vehicle=${vehicle.id}`}
             className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
               isAvailable
-                ? 'bg-electric hover:bg-electric-hover text-midnight shadow-md shadow-electric/20 hover:scale-[1.02]'
+                ? 'bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] shadow-md shadow-[#FFD83D]/15 hover:scale-[1.02]'
                 : 'bg-slate-200 text-slate-400 cursor-not-allowed pointer-events-none'
             }`}
           >

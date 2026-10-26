@@ -200,7 +200,7 @@ export default function BookingWizard({ vehicles }: BookingWizardProps) {
                 currentStep === s.num
                   ? 'bg-midnight text-white shadow-sm'
                   : currentStep > s.num
-                  ? 'bg-electric/20 text-midnight font-bold'
+                  ? 'bg-[#FFD83D]/20 text-midnight font-bold'
                   : 'text-slate-400 bg-slate-50'
               }`}
             >
@@ -377,7 +377,7 @@ export default function BookingWizard({ vehicles }: BookingWizardProps) {
                     <div className="flex items-center gap-1.5 mb-1">
                       <span
                         className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
-                          isEV ? 'bg-electric text-midnight' : 'bg-amber-400 text-midnight'
+                          isEV ? 'bg-[#FFD83D] text-[#080A0D]' : 'bg-[#28618F] text-white'
                         }`}
                       >
                         {isEV ? 'EV' : 'Fuel'}
@@ -407,7 +407,7 @@ export default function BookingWizard({ vehicles }: BookingWizardProps) {
                         isSelected ? 'border-midnight bg-midnight text-white' : 'border-slate-300'
                       }`}
                     >
-                      {isSelected && <span className="w-2 h-2 rounded-full bg-electric" />}
+                      {isSelected && <span className="w-2 h-2 rounded-full bg-[#FFD83D]" />}
                     </div>
                   </div>
                 </div>
@@ -585,7 +585,7 @@ export default function BookingWizard({ vehicles }: BookingWizardProps) {
             </div>
 
             <div className="flex-1 text-center sm:text-left">
-              <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-electric text-midnight">
+              <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-[#FFD83D] text-[#080A0D]">
                 {selectedVehicle.category === 'electric' ? 'Electric Vehicle' : 'Fuel Vehicle'}
               </span>
               <h3 className="font-heading text-xl font-bold text-white mt-1">
@@ -598,7 +598,7 @@ export default function BookingWizard({ vehicles }: BookingWizardProps) {
 
             <div className="text-center sm:text-right">
               <span className="text-[10px] text-slate-400 block uppercase">Daily Rate</span>
-              <span className="font-heading text-xl font-bold text-electric">
+              <span className="font-heading text-xl font-bold text-[#FFD83D]">
                 {formatNPR(selectedVehicle.dailyRate)}
               </span>
             </div>
@@ -710,7 +710,7 @@ export default function BookingWizard({ vehicles }: BookingWizardProps) {
             <button
               type="submit"
               disabled={isSubmitting || !agreedToTerms}
-              className={`bg-electric hover:bg-electric-hover text-midnight font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-electric/20 hover:scale-[1.01] transition-all flex items-center gap-2 font-heading ${
+              className={`bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-[#FFD83D]/20 hover:scale-[1.01] transition-all flex items-center gap-2 font-heading ${
                 isSubmitting || !agreedToTerms ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             >

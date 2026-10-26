@@ -1,21 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Calendar, Car, Send, CheckCircle2, ShieldCheck, MapPin, ArrowRight } from 'lucide-react';
+import { Calendar, Car, Send, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'How It Works | UDrive Rental Service Nepal',
-  description: 'Learn how to book and rent a vehicle with UDrive in Nepal in 4 simple steps.',
+  title: 'How It Works | U Drive Nepal',
+  description: 'Learn how to book and rent a vehicle with U Drive in Nepal in 4 simple steps.',
 };
 
 export default function HowItWorksPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-16">
       <div className="text-center max-w-2xl mx-auto">
-        <span className="text-xs font-bold uppercase tracking-widest text-slate-500 font-mono">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#28618F] bg-[#28618F]/10 px-3.5 py-1 rounded-full">
           Rental Guide
         </span>
-        <h1 className="font-heading text-3xl sm:text-5xl font-extrabold text-midnight tracking-tight mt-1">
+        <h1 className="font-heading text-3xl sm:text-5xl font-extrabold text-[#080A0D] tracking-tight mt-3">
           How Rental Booking Works
         </h1>
         <p className="text-slate-600 text-sm sm:text-base mt-2">
@@ -56,14 +56,14 @@ export default function HowItWorksPage() {
         ].map((step) => (
           <div
             key={step.num}
-            className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center gap-6"
+            className="bg-white rounded-3xl border border-[#E4E5E2] p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center gap-6"
           >
-            <div className="w-16 h-16 rounded-2xl bg-midnight text-electric font-mono font-black text-2xl flex items-center justify-center shrink-0">
+            <div className="w-16 h-16 rounded-2xl bg-[#080A0D] text-[#FFD83D] font-mono font-black text-2xl flex items-center justify-center shrink-0">
               {step.num}
             </div>
 
             <div className="flex-1 space-y-1">
-              <h3 className="font-heading text-xl font-bold text-midnight">{step.title}</h3>
+              <h3 className="font-heading text-xl font-bold text-[#080A0D]">{step.title}</h3>
               <p className="text-sm text-slate-600 leading-relaxed">{step.desc}</p>
               <p className="text-xs text-slate-400 font-mono pt-1">{step.detail}</p>
             </div>
@@ -72,21 +72,21 @@ export default function HowItWorksPage() {
       </div>
 
       {/* CTA Box */}
-      <div className="bg-midnight rounded-3xl p-8 sm:p-10 text-center text-white space-y-4">
+      <div className="bg-[#080A0D] rounded-3xl p-8 sm:p-10 text-center text-white space-y-4 border border-[#242933]">
         <h3 className="font-heading text-2xl font-bold">Ready to Start Your Journey in Nepal?</h3>
         <p className="text-sm text-slate-300 max-w-lg mx-auto">
-          Explore our available fleet or calculate pricing for your specific dates.
+          Explore our available fleet or calculate pricing for your specific dates with U Drive.
         </p>
         <div className="pt-2 flex justify-center gap-4">
           <Link
             href="/vehicles"
-            className="bg-electric hover:bg-electric-hover text-midnight font-bold px-7 py-3 rounded-xl text-sm transition-all"
+            className="bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] font-bold px-7 py-3 rounded-xl text-sm transition-all"
           >
             Browse Fleet
           </Link>
           <Link
             href="/booking"
-            className="border border-slate-700 hover:border-slate-500 text-white font-semibold px-7 py-3 rounded-xl text-sm transition-colors"
+            className="border border-[#242933] hover:border-slate-500 text-white font-semibold px-7 py-3 rounded-xl text-sm transition-colors"
           >
             Start Booking
           </Link>

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Vehicle } from '@/types';
 import { formatNPR, calculateRentalPricing } from '@/lib/pricing';
@@ -15,11 +16,8 @@ import {
   ShieldCheck,
   ShieldAlert,
   ArrowRight,
-  CheckCircle2,
   Gauge,
   Navigation,
-  Info,
-  Car,
 } from 'lucide-react';
 
 const DEFAULT_LOCATIONS = [
@@ -96,22 +94,22 @@ export default function VehicleDetailClient({
     <div className="space-y-16">
       {/* Top Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs text-slate-500">
-        <Link href="/" className="hover:text-midnight">
+        <Link href="/" className="hover:text-[#080A0D]">
           Home
         </Link>
         <span>/</span>
-        <Link href="/vehicles" className="hover:text-midnight">
+        <Link href="/vehicles" className="hover:text-[#080A0D]">
           Vehicles
         </Link>
         <span>/</span>
         <Link
-          href={isElectric ? '/vehicles/electric' : '/vehicles/fuel'}
-          className="hover:text-midnight"
+          href={isElectric ? '/vehicles?category=electric' : '/vehicles?category=fuel'}
+          className="hover:text-[#080A0D]"
         >
           {isElectric ? 'Electric' : 'Fuel'}
         </Link>
         <span>/</span>
-        <span className="text-midnight font-bold">{vehicle.name}</span>
+        <span className="text-[#080A0D] font-bold">{vehicle.name}</span>
       </nav>
 
       {/* Main 2-Column Showcase */}
@@ -119,25 +117,25 @@ export default function VehicleDetailClient({
         {/* Left Column (Images, Specs, Details) */}
         <div className="lg:col-span-7 space-y-8">
           {/* Main Visual Display */}
-          <div className="relative rounded-3xl bg-midnight border border-slate-800 shadow-xl overflow-hidden aspect-[16/10]">
+          <div className="relative rounded-3xl bg-[#080A0D] border border-[#242933] shadow-xl overflow-hidden aspect-[16/10]">
             {/* Badges */}
             <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2">
               <span
                 className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wider ${
                   isElectric
-                    ? 'bg-electric text-midnight shadow-md shadow-electric/20'
-                    : 'bg-amber-400 text-midnight shadow-md shadow-amber-400/20'
+                    ? 'bg-[#FFD83D] text-[#080A0D] shadow-md shadow-[#FFD83D]/20'
+                    : 'bg-[#28618F] text-white shadow-md shadow-[#28618F]/20'
                 }`}
               >
                 {isElectric ? <Zap className="w-3.5 h-3.5 fill-current" /> : <Fuel className="w-3.5 h-3.5" />}
                 {isElectric ? 'Electric Vehicle' : 'Fuel Vehicle'}
               </span>
 
-              <span className="bg-slate-900/80 backdrop-blur-sm text-slate-200 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-700">
+              <span className="bg-[#080A0D]/85 backdrop-blur-sm text-slate-200 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-700">
                 {vehicle.bodyStyle}
               </span>
 
-              <span className="bg-slate-900/80 backdrop-blur-sm text-slate-300 text-xs font-mono px-2.5 py-1 rounded-md border border-slate-700">
+              <span className="bg-[#080A0D]/85 backdrop-blur-sm text-slate-300 text-xs font-mono px-2.5 py-1 rounded-md border border-slate-700">
                 {vehicle.year} Model
               </span>
             </div>
@@ -147,8 +145,8 @@ export default function VehicleDetailClient({
               <span
                 className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-md border ${
                   isAvailable
-                    ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/40'
-                    : 'bg-rose-950/80 text-rose-300 border-rose-500/40'
+                    ? 'bg-emerald-950/85 text-emerald-300 border-emerald-500/40'
+                    : 'bg-rose-950/85 text-rose-300 border-rose-500/40'
                 }`}
               >
                 <span
@@ -162,10 +160,12 @@ export default function VehicleDetailClient({
 
             {/* Real Vehicle Photograph */}
             <div className="relative w-full h-full overflow-hidden">
-              <img
+              <Image
                 src={vehicle.image || '/images/vehicles/fallback-car.svg'}
                 alt={`${vehicle.name} ${vehicle.color}`}
-                className="w-full h-full object-cover"
+                fill
+                priority
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 pointer-events-none" />
             </div>
@@ -173,7 +173,7 @@ export default function VehicleDetailClient({
 
           {/* Vehicle Identity & Overview */}
           <div className="space-y-3">
-            <h1 className="font-heading text-3xl sm:text-4xl font-extrabold text-midnight tracking-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#080A0D] tracking-tight">
               {vehicle.name}
             </h1>
             <p className="text-slate-500 text-sm font-medium">
@@ -199,35 +199,35 @@ export default function VehicleDetailClient({
           </div>
 
           {/* Official Rate Architecture Table */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
-            <h3 className="font-heading text-lg font-bold text-midnight flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-midnight" />
+          <div className="bg-white rounded-2xl border border-[#E4E5E2] p-6 shadow-sm space-y-4">
+            <h3 className="font-heading text-lg font-bold text-[#080A0D] flex items-center gap-2">
+              <Calendar className="w-5 h-5 text-[#28618F]" />
               <span>Published Rates & Official Packages</span>
             </h3>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
+              <div className="bg-[#F7F7F4] p-3.5 rounded-xl border border-[#E4E5E2]">
                 <span className="text-[11px] text-slate-500 block uppercase font-bold">Daily</span>
-                <span className="font-heading text-lg font-bold text-midnight block mt-1">
+                <span className="font-heading text-lg font-bold text-[#080A0D] block mt-1">
                   {formatNPR(vehicle.dailyRate)}
                 </span>
                 <span className="text-[10px] text-slate-400">per 24 hours</span>
               </div>
 
-              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
+              <div className="bg-[#F7F7F4] p-3.5 rounded-xl border border-[#E4E5E2]">
                 <span className="text-[11px] text-slate-500 block uppercase font-bold">7 Days</span>
-                <span className="font-heading text-lg font-bold text-midnight block mt-1">
+                <span className="font-heading text-lg font-bold text-[#080A0D] block mt-1">
                   {formatNPR(vehicle.weeklyRate)}
                 </span>
-                <span className="text-[10px] text-emerald-600 font-semibold">5% Discounted</span>
+                <span className="text-[10px] text-emerald-700 font-semibold">5% Discounted</span>
               </div>
 
-              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
+              <div className="bg-[#F7F7F4] p-3.5 rounded-xl border border-[#E4E5E2]">
                 <span className="text-[11px] text-slate-500 block uppercase font-bold">15 Days</span>
-                <span className="font-heading text-lg font-bold text-midnight block mt-1">
+                <span className="font-heading text-lg font-bold text-[#080A0D] block mt-1">
                   {formatNPR(vehicle.fifteenDayRate)}
                 </span>
-                <span className="text-[10px] text-emerald-600 font-semibold">10% Discounted</span>
+                <span className="text-[10px] text-emerald-700 font-semibold">10% Discounted</span>
               </div>
 
               <div className="bg-emerald-50/60 p-3.5 rounded-xl border border-emerald-200">
@@ -241,40 +241,40 @@ export default function VehicleDetailClient({
           </div>
 
           {/* Verified Technical Specs */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
-            <h3 className="font-heading text-lg font-bold text-midnight flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-midnight" />
+          <div className="bg-white rounded-2xl border border-[#E4E5E2] p-6 shadow-sm space-y-4">
+            <h3 className="font-heading text-lg font-bold text-[#080A0D] flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-[#28618F]" />
               <span>Verified Specifications</span>
             </h3>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs">
-              <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div className="p-3 rounded-xl bg-[#F7F7F4] border border-[#E4E5E2]">
                 <span className="text-slate-500 block text-[11px]">Ground Clearance</span>
-                <strong className="text-midnight text-sm font-heading block mt-0.5">
+                <strong className="text-[#080A0D] text-sm font-heading block mt-0.5">
                   {vehicle.groundClearance}
                 </strong>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div className="p-3 rounded-xl bg-[#F7F7F4] border border-[#E4E5E2]">
                 <span className="text-slate-500 block text-[11px]">
                   {isElectric ? 'Certified EV Range' : 'Fuel Mileage'}
                 </span>
-                <strong className="text-midnight text-sm font-heading block mt-0.5">
+                <strong className="text-[#080A0D] text-sm font-heading block mt-0.5">
                   {vehicle.rangeVerified ? vehicle.rangeOrMileage : 'Pending Confirmation'}
                 </strong>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div className="p-3 rounded-xl bg-[#F7F7F4] border border-[#E4E5E2]">
                 <span className="text-slate-500 block text-[11px]">Category & Style</span>
-                <strong className="text-midnight text-sm font-heading block mt-0.5">
+                <strong className="text-[#080A0D] text-sm font-heading block mt-0.5">
                   {vehicle.category === 'electric' ? 'Electric' : 'Fuel'} {vehicle.bodyStyle}
                 </strong>
               </div>
 
               {vehicle.specs?.map((spec, i) => (
-                <div key={i} className="p-3 rounded-xl bg-slate-50 border border-slate-100">
+                <div key={i} className="p-3 rounded-xl bg-[#F7F7F4] border border-[#E4E5E2]">
                   <span className="text-slate-500 block text-[11px]">{spec.label}</span>
-                  <strong className="text-midnight text-sm font-heading block mt-0.5">
+                  <strong className="text-[#080A0D] text-sm font-heading block mt-0.5">
                     {spec.value}
                   </strong>
                 </div>
@@ -285,20 +285,20 @@ export default function VehicleDetailClient({
 
         {/* Right Column: Live Booking Calculator Sidebar (Sticky) */}
         <div className="lg:col-span-5 sticky top-24 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-7 shadow-xl space-y-6">
+          <div className="bg-white rounded-3xl border border-[#E4E5E2] p-6 sm:p-7 shadow-xl space-y-6">
             <div className="flex items-start justify-between pb-4 border-b border-slate-100">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                   Starting From
                 </span>
-                <div className="font-heading text-3xl font-extrabold text-midnight">
+                <div className="font-heading text-3xl font-extrabold text-[#080A0D]">
                   {formatNPR(vehicle.dailyRate)}
                   <span className="text-xs font-normal text-slate-500"> / day</span>
                 </div>
               </div>
 
               <div className="text-right">
-                <span className="inline-block px-2.5 py-1 rounded-md bg-electric/20 text-midnight text-xs font-bold font-mono">
+                <span className="inline-block px-2.5 py-1 rounded-md bg-[#FFD83D]/20 text-[#080A0D] text-xs font-bold font-mono">
                   Up to 15% OFF
                 </span>
               </div>
@@ -317,8 +317,8 @@ export default function VehicleDetailClient({
                     onClick={() => handleApplyPreset(days)}
                     className={`py-2 text-xs font-bold rounded-xl border transition-all ${
                       effectiveDays === days
-                        ? 'bg-midnight text-white border-midnight'
-                        : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                        ? 'bg-[#080A0D] text-[#FFD83D] border-[#080A0D]'
+                        : 'bg-[#F7F7F4] text-slate-700 border-[#E4E5E2] hover:bg-slate-100'
                     }`}
                   >
                     {days} {days === 1 ? 'Day' : 'Days'}
@@ -331,7 +331,7 @@ export default function VehicleDetailClient({
             <div className="space-y-3 pt-2">
               <div className="space-y-1">
                 <label className="text-xs font-bold text-slate-600 flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-midnight" />
+                  <MapPin className="w-3.5 h-3.5 text-[#28618F]" />
                   Pickup & Drop-off Location
                 </label>
                 <select
@@ -340,7 +340,7 @@ export default function VehicleDetailClient({
                     setPickupLocation(e.target.value);
                     setReturnLocation(e.target.value);
                   }}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-midnight"
+                  className="w-full bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-3 py-2 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
                 >
                   {DEFAULT_LOCATIONS.map((loc) => (
                     <option key={loc} value={loc}>
@@ -361,7 +361,7 @@ export default function VehicleDetailClient({
                       setPickupDate(e.target.value);
                       setActiveDurationPreset(null);
                     }}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-2 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-midnight"
+                    className="w-full bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-2.5 py-2 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
                   />
                 </div>
                 <div className="space-y-1">
@@ -374,23 +374,23 @@ export default function VehicleDetailClient({
                       setReturnDate(e.target.value);
                       setActiveDurationPreset(null);
                     }}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-2 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-midnight"
+                    className="w-full bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-2.5 py-2 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
                   />
                 </div>
               </div>
             </div>
 
             {/* Live Pricing Breakdown Card */}
-            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-2.5">
+            <div className="p-4 rounded-2xl bg-[#F7F7F4] border border-[#E4E5E2] space-y-2.5">
               <div className="flex items-center justify-between text-xs font-bold text-slate-700">
                 <span>Calculated Rental Duration</span>
-                <span className="font-mono text-midnight">
+                <span className="font-mono text-[#080A0D]">
                   {effectiveDays} {effectiveDays === 1 ? 'Day' : 'Days'}
                 </span>
               </div>
 
               {/* Line Items */}
-              <div className="space-y-1 pt-2 border-t border-slate-200 text-xs">
+              <div className="space-y-1 pt-2 border-t border-[#E4E5E2] text-xs">
                 {pricing.breakdown.map((item, idx) => (
                   <div key={idx} className="flex items-center justify-between text-slate-600">
                     <span>
@@ -404,7 +404,7 @@ export default function VehicleDetailClient({
 
               {/* Savings callout if applicable */}
               {pricing.savings > 0 && (
-                <div className="pt-2 border-t border-slate-200 flex items-center justify-between text-xs text-emerald-700 font-semibold">
+                <div className="pt-2 border-t border-[#E4E5E2] flex items-center justify-between text-xs text-emerald-700 font-semibold">
                   <span>Transparent Package Saving ({pricing.savingsPercent}%)</span>
                   <span>- {formatNPR(pricing.savings)}</span>
                 </div>
@@ -415,7 +415,7 @@ export default function VehicleDetailClient({
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
                   Estimated Rental Total
                 </span>
-                <span className="font-heading text-2xl font-extrabold text-midnight">
+                <span className="font-heading text-2xl font-extrabold text-[#080A0D]">
                   {formatNPR(pricing.subtotal)}
                 </span>
               </div>
@@ -428,7 +428,7 @@ export default function VehicleDetailClient({
               disabled={!isAvailable}
               className={`w-full py-4 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center justify-center gap-2 font-heading ${
                 isAvailable
-                  ? 'bg-electric hover:bg-electric-hover text-midnight shadow-electric/20 hover:scale-[1.01]'
+                  ? 'bg-[#FFD83D] hover:bg-[#F0C828] text-[#080A0D] shadow-[#FFD83D]/15 hover:scale-[1.01]'
                   : 'bg-slate-200 text-slate-400 cursor-not-allowed'
               }`}
             >
@@ -445,14 +445,14 @@ export default function VehicleDetailClient({
 
       {/* Similar Available Vehicles */}
       {similarVehicles.length > 0 && (
-        <section className="pt-12 border-t border-slate-200 space-y-6">
+        <section className="pt-12 border-t border-[#E4E5E2] space-y-6">
           <div className="flex items-center justify-between">
-            <h3 className="font-heading text-2xl font-bold text-midnight">
+            <h3 className="font-heading text-2xl font-bold text-[#080A0D]">
               Similar Available Vehicles
             </h3>
             <Link
               href="/vehicles"
-              className="text-xs font-bold text-midnight hover:text-slate-600 flex items-center gap-1"
+              className="text-xs font-bold text-[#080A0D] hover:text-[#28618F] flex items-center gap-1 transition-colors"
             >
               <span>View Full Fleet</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -463,25 +463,26 @@ export default function VehicleDetailClient({
             {similarVehicles.map((v) => (
               <div
                 key={v.id}
-                className="bg-white rounded-2xl border border-slate-200 p-4 hover:shadow-md transition-all flex items-center gap-4"
+                className="bg-white rounded-2xl border border-[#E4E5E2] p-4 hover:shadow-md transition-all flex items-center gap-4"
               >
-                <div className="w-24 h-16 bg-midnight rounded-xl overflow-hidden p-1 flex items-center justify-center shrink-0">
-                  <img
+                <div className="relative w-24 h-16 bg-[#080A0D] rounded-xl overflow-hidden shrink-0">
+                  <Image
                     src={v.image || '/images/vehicles/fallback-car.svg'}
                     alt={v.name}
-                    className="w-full h-full object-contain"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-heading text-sm font-bold text-midnight truncate">{v.name}</h4>
+                  <h4 className="font-heading text-sm font-bold text-[#080A0D] truncate">{v.name}</h4>
                   <p className="text-xs text-slate-500">{v.color}</p>
-                  <p className="text-xs font-bold text-midnight mt-1">
+                  <p className="text-xs font-bold text-[#080A0D] mt-1">
                     {formatNPR(v.dailyRate)} <span className="font-normal text-[10px]">/ day</span>
                   </p>
                 </div>
                 <Link
                   href={`/vehicles/${v.slug}`}
-                  className="px-2.5 py-1.5 rounded-lg border border-slate-200 text-xs font-semibold hover:bg-slate-50 text-slate-700"
+                  className="px-3 py-1.5 rounded-lg border border-[#E4E5E2] text-xs font-semibold hover:bg-slate-50 text-slate-700"
                 >
                   View
                 </Link>

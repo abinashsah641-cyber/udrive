@@ -20,11 +20,13 @@ export default function ContactClient({ settings }: ContactClientProps) {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-12">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-slate-500 font-mono">
-          Get in Touch
-        </span>
-        <h1 className="font-heading text-3xl sm:text-5xl font-extrabold text-midnight tracking-tight mt-1">
-          Contact UDrive Rental Service
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#28618F]/10 text-[#28618F] text-xs font-bold uppercase tracking-wider mb-3">
+          <span>Get in Touch</span>
+          <span className="text-slate-400">•</span>
+          <span className="text-slate-600 font-semibold">Every Ride A New Story</span>
+        </div>
+        <h1 className="font-heading text-3xl sm:text-5xl font-extrabold text-[#080A0D] tracking-tight mt-1">
+          Contact U Drive
         </h1>
         <p className="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
           Have questions regarding vehicle availability, long-term rentals, or airport pickup in Kathmandu? Reach out directly.
@@ -33,16 +35,16 @@ export default function ContactClient({ settings }: ContactClientProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         {/* Contact Channels Card */}
-        <div className="md:col-span-5 bg-midnight text-white rounded-3xl p-8 space-y-6">
+        <div className="md:col-span-5 bg-[#080A0D] text-white rounded-3xl p-8 space-y-6 border border-[#242933]">
           <h3 className="font-heading text-xl font-bold tracking-tight">Direct Channels</h3>
 
           <div className="space-y-4 text-xs">
             <div className="flex items-start gap-3">
-              <Phone className="w-4 h-4 text-electric shrink-0 mt-0.5" />
+              <Phone className="w-4 h-4 text-[#FFD83D] shrink-0 mt-0.5" />
               <div>
                 <strong className="block text-white">Phone & Support</strong>
                 <span className="text-slate-400">
-                  {settings.phone || 'Phone number available upon booking inquiry confirmation'}
+                  {settings.phone || 'Direct line available upon booking confirmation'}
                 </span>
               </div>
             </div>
@@ -52,13 +54,13 @@ export default function ContactClient({ settings }: ContactClientProps) {
               <div>
                 <strong className="block text-white">WhatsApp Desk</strong>
                 <span className="text-slate-400">
-                  {settings.whatsappNumber || 'Configure in Admin Settings'}
+                  {settings.whatsappNumber || 'Available via WhatsApp Float & Booking'}
                 </span>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <Clock className="w-4 h-4 text-electric shrink-0 mt-0.5" />
+              <Clock className="w-4 h-4 text-[#FFD83D] shrink-0 mt-0.5" />
               <div>
                 <strong className="block text-white">Timezone & Operating Hours</strong>
                 <span className="text-slate-400">Asia/Kathmandu (NPT, UTC +05:45)</span>
@@ -67,7 +69,7 @@ export default function ContactClient({ settings }: ContactClientProps) {
           </div>
 
           {/* Facebook Link */}
-          <div className="pt-4 border-t border-slate-800">
+          <div className="pt-4 border-t border-[#242933]">
             <span className="text-[11px] uppercase font-bold text-slate-400 block mb-2">
               Official Social Profile
             </span>
@@ -75,22 +77,22 @@ export default function ContactClient({ settings }: ContactClientProps) {
               href={settings.facebookUrl || 'https://www.facebook.com/profile.php?id=61584871988112'}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 text-xs font-semibold transition-all group"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#28618F]/20 hover:bg-[#28618F]/30 text-[#60A5FA] border border-[#28618F]/40 text-xs font-semibold transition-all group"
             >
-              <span>Follow UDrive on Facebook</span>
+              <span>Follow U Drive on Facebook</span>
               <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
 
           {/* Pickup locations */}
-          <div className="pt-4 border-t border-slate-800 space-y-2">
+          <div className="pt-4 border-t border-[#242933] space-y-2">
             <span className="text-[11px] uppercase font-bold text-slate-400 block">
               Configured Pickup Hubs
             </span>
             <ul className="space-y-1 text-xs text-slate-300">
               {settings.pickupLocations.map((loc, i) => (
                 <li key={i} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-electric" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFD83D]" />
                   <span>{loc}</span>
                 </li>
               ))}
@@ -99,69 +101,71 @@ export default function ContactClient({ settings }: ContactClientProps) {
         </div>
 
         {/* Message Form */}
-        <div className="md:col-span-7 bg-white rounded-3xl border border-slate-200 p-8 shadow-sm space-y-5">
-          <h3 className="font-heading text-xl font-bold text-midnight">Send an Inquiry</h3>
-          <p className="text-xs text-slate-500">
-            Have a custom fleet inquiry or corporate leasing question? Leave a message below.
-          </p>
+        <div className="md:col-span-7 bg-white rounded-3xl border border-[#E4E5E2] p-8 shadow-sm space-y-6">
+          <h3 className="font-heading text-xl font-bold text-[#080A0D]">Send an Online Inquiry</h3>
 
-          {submitted && (
-            <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold flex items-center gap-2">
-              <Check className="w-4 h-4 text-emerald-600" />
-              <span>Thank you! Your inquiry has been received. Our team will contact you.</span>
+          {submitted ? (
+            <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm space-y-2 animate-in fade-in">
+              <div className="flex items-center gap-2 font-bold text-base">
+                <Check className="w-5 h-5 text-emerald-600" />
+                <span>Message Received</span>
+              </div>
+              <p className="text-xs text-emerald-700 leading-relaxed">
+                Thank you for contacting U Drive. A representative will review your message and connect via phone or WhatsApp shortly.
+              </p>
             </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-1">
-              <label className="text-xs font-bold text-slate-700">Full Name *</label>
-              <input
-                type="text"
-                required
-                placeholder="Your full name"
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-midnight"
-              />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-1">
-                <label className="text-xs font-bold text-slate-700">Phone Number *</label>
-                <input
-                  type="tel"
-                  required
-                  placeholder="Your phone number"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-midnight"
-                />
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="font-bold text-slate-700 uppercase tracking-wider">Your Full Name</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Ramesh Thapa"
+                    className="w-full bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-3.5 py-3 text-sm text-[#080A0D] focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="font-bold text-slate-700 uppercase tracking-wider">Phone / WhatsApp</label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+977 98XXXXXXXX"
+                    className="w-full bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-3.5 py-3 text-sm text-[#080A0D] focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
+                  />
+                </div>
               </div>
 
-              <div className="space-y-1">
-                <label className="text-xs font-bold text-slate-700">Email Address</label>
+              <div className="space-y-1.5">
+                <label className="font-bold text-slate-700 uppercase tracking-wider">Email Address</label>
                 <input
                   type="email"
-                  placeholder="Your email address"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-midnight"
+                  required
+                  placeholder="ramesh@example.com"
+                  className="w-full bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-3.5 py-3 text-sm text-[#080A0D] focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
                 />
               </div>
-            </div>
 
-            <div className="space-y-1">
-              <label className="text-xs font-bold text-slate-700">Your Message</label>
-              <textarea
-                rows={4}
-                required
-                placeholder="Tell us about your rental requirements, travel dates, or questions..."
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-midnight"
-              />
-            </div>
+              <div className="space-y-1.5">
+                <label className="font-bold text-slate-700 uppercase tracking-wider">Message / Inquiry Details</label>
+                <textarea
+                  rows={4}
+                  required
+                  placeholder="Please specify vehicle preferences, rental dates, or pickup inquiries..."
+                  className="w-full bg-[#F7F7F4] border border-[#E4E5E2] rounded-xl px-3.5 py-3 text-sm text-[#080A0D] focus:outline-none focus:ring-2 focus:ring-[#080A0D]"
+                />
+              </div>
 
-            <button
-              type="submit"
-              className="bg-midnight hover:bg-slate-800 text-white font-bold text-xs px-6 py-3 rounded-xl transition-all flex items-center gap-2 font-heading shadow-md"
-            >
-              <Send className="w-3.5 h-3.5" />
-              <span>Send Inquiry</span>
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="w-full bg-[#080A0D] hover:bg-[#12161F] text-[#FFD83D] font-bold text-sm py-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 font-heading"
+              >
+                <Send className="w-4 h-4" />
+                <span>Send Message</span>
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </div>

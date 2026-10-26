@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   LayoutDashboard,
   Car,
@@ -13,17 +14,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col md:flex-row">
       {/* Admin Sidebar */}
-      <aside className="w-full md:w-64 bg-midnight text-white flex flex-col justify-between shrink-0 border-r border-slate-800">
+      <aside className="w-full md:w-64 bg-[#080A0D] text-white flex flex-col justify-between shrink-0 border-r border-[#242933]">
         <div className="p-6 space-y-6">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-electric text-midnight flex items-center justify-center font-black">
-              <Shield className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl bg-[#FFD83D] text-[#080A0D] flex items-center justify-center font-black">
+              <Shield className="w-5 h-5 text-[#080A0D]" />
             </div>
             <div>
               <span className="font-heading font-bold text-sm tracking-tight text-white block">
-                UDrive Admin
+                U Drive Admin
               </span>
-              <span className="text-[10px] text-slate-400 font-mono">Fleet Operations</span>
+              <span className="text-[10px] text-slate-400 font-mono">Operations Portal</span>
             </div>
           </div>
 
@@ -32,7 +33,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               href="/admin"
               className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
             >
-              <LayoutDashboard className="w-4 h-4 text-electric" />
+              <LayoutDashboard className="w-4 h-4 text-[#FFD83D]" />
               <span>Overview & Stats</span>
             </Link>
 
@@ -62,7 +63,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </nav>
         </div>
 
-        <div className="p-6 border-t border-slate-800">
+        <div className="p-6 border-t border-[#242933]">
           <Link
             href="/"
             target="_blank"
