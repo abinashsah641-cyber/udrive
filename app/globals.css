@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #101827;
+  --color-midnight-light: #1A2438;
+  --color-midnight-card: #152033;
+  --color-electric: #B8F451;
+  --color-electric-hover: #A5E43B;
+  --color-electric-glow: rgba(184, 244, 81, 0.25);
+  --color-offwhite: #F7F7F2;
+  --color-offwhite-alt: #EFEFE9;
+  --color-slate-muted: #64748B;
+  --color-slate-light: #94A3B8;
+  --color-slate-dark: #334155;
+  --font-heading: "Space Grotesk", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #F7F7F2;
+  --foreground: #101827;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0D1420;
+}
+::-webkit-scrollbar-thumb {
+  background: #25334A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8F451;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

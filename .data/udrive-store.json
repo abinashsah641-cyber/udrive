@@ -1,0 +1,949 @@
+{
+  "vehicles": [
+    {
+      "id": "byd-atto-1",
+      "slug": "byd-atto-1",
+      "name": "BYD Atto 1",
+      "category": "electric",
+      "bodyStyle": "Hatchback",
+      "fuelType": "Electric",
+      "year": 2025,
+      "color": "Spark-Green",
+      "groundClearance": "175 mm",
+      "rangeOrMileage": "280–300 km",
+      "rangeVerified": true,
+      "dailyRate": 6500,
+      "weeklyRate": 43225,
+      "fifteenDayRate": 87750,
+      "monthlyRate": 165750,
+      "image": "/images/vehicles/byd-atto-1.svg",
+      "gallery": [
+        "/images/vehicles/byd-atto-1.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "175 mm"
+        },
+        {
+          "label": "Range",
+          "value": "280–300 km"
+        },
+        {
+          "label": "Category",
+          "value": "Electric Hatchback"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "Modern, agile electric hatchback in vibrant Spark-Green. Perfect for Kathmandu city commutes and scenic highway drives with zero emissions.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "byd-atto-2",
+      "slug": "byd-atto-2",
+      "name": "BYD Atto 2",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2026,
+      "color": "Black",
+      "groundClearance": "200 mm",
+      "rangeOrMileage": "420 km",
+      "rangeVerified": true,
+      "dailyRate": 9000,
+      "weeklyRate": 59850,
+      "fifteenDayRate": 121500,
+      "monthlyRate": 229500,
+      "image": "/images/vehicles/byd-atto-2.svg",
+      "gallery": [
+        "/images/vehicles/byd-atto-2.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "200 mm"
+        },
+        {
+          "label": "Range",
+          "value": "420 km"
+        },
+        {
+          "label": "Category",
+          "value": "Electric SUV"
+        },
+        {
+          "label": "Year",
+          "value": "2026"
+        }
+      ],
+      "description": "High-clearance 200 mm electric SUV finished in deep metallic black. Built with ample ground clearance to navigate Nepal’s varied road conditions.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "byd-atto-3",
+      "slug": "byd-atto-3",
+      "name": "BYD Atto 3",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2024,
+      "color": "Blue",
+      "groundClearance": "175 mm",
+      "rangeOrMileage": "420 km+",
+      "rangeVerified": true,
+      "dailyRate": 9500,
+      "weeklyRate": 63175,
+      "fifteenDayRate": 128250,
+      "monthlyRate": 242250,
+      "image": "/images/vehicles/byd-atto-3.svg",
+      "gallery": [
+        "/images/vehicles/byd-atto-3.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "175 mm"
+        },
+        {
+          "label": "Range",
+          "value": "420 km+"
+        },
+        {
+          "label": "Category",
+          "value": "Electric SUV"
+        },
+        {
+          "label": "Year",
+          "value": "2024"
+        }
+      ],
+      "description": "Award-winning global electric SUV in signature blue. Generous interior space, advanced tech, and proven long-range performance for highway journeys.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "nevo-e5",
+      "slug": "nevo-e5",
+      "name": "Nevo E5",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2022,
+      "color": "Blue with sunroof",
+      "groundClearance": "205 mm",
+      "rangeOrMileage": "300 km",
+      "rangeVerified": true,
+      "dailyRate": 6500,
+      "weeklyRate": 43225,
+      "fifteenDayRate": 87750,
+      "monthlyRate": 165750,
+      "image": "/images/vehicles/nevo-e5.svg",
+      "gallery": [
+        "/images/vehicles/nevo-e5.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "verificationNote": "Name supplied as Nevo E5; preserve source naming.",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "205 mm"
+        },
+        {
+          "label": "Range",
+          "value": "300 km"
+        },
+        {
+          "label": "Roof Feature",
+          "value": "Sunroof"
+        },
+        {
+          "label": "Year",
+          "value": "2022"
+        }
+      ],
+      "description": "Electric SUV featuring 205 mm ground clearance and an airy sunroof. Ideal for weekend getaways with expansive vistas.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "omoda-e5",
+      "slug": "omoda-e5",
+      "name": "Omoda E5",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2025,
+      "color": "Dark with sunroof",
+      "groundClearance": "191 mm",
+      "rangeOrMileage": "400 km+",
+      "rangeVerified": true,
+      "dailyRate": 9500,
+      "weeklyRate": 63175,
+      "fifteenDayRate": 128250,
+      "monthlyRate": 242250,
+      "image": "/images/vehicles/omoda-e5.svg",
+      "gallery": [
+        "/images/vehicles/omoda-e5.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "191 mm"
+        },
+        {
+          "label": "Range",
+          "value": "400 km+"
+        },
+        {
+          "label": "Roof Feature",
+          "value": "Sunroof"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "Futuristic fastback styling in a sleek dark finish with panoramic sunroof. 191 mm ground clearance and 400+ km range.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "omoda-e5-pro",
+      "slug": "omoda-e5-pro",
+      "name": "Omoda E5 Pro",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2026,
+      "color": "Cloud Blue, with sunroof",
+      "groundClearance": "191 mm",
+      "rangeOrMileage": "420 km+",
+      "rangeVerified": true,
+      "dailyRate": 10000,
+      "weeklyRate": 66500,
+      "fifteenDayRate": 135000,
+      "monthlyRate": 255000,
+      "image": "/images/vehicles/omoda-e5-pro.svg",
+      "gallery": [
+        "/images/vehicles/omoda-e5-pro.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "191 mm"
+        },
+        {
+          "label": "Range",
+          "value": "420 km+"
+        },
+        {
+          "label": "Roof Feature",
+          "value": "Sunroof"
+        },
+        {
+          "label": "Year",
+          "value": "2026"
+        }
+      ],
+      "description": "Flagship EV crossover in Cloud Blue with enhanced 420+ km range, sunroof, and elevated driving comfort.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "ridard-pickup",
+      "slug": "ridard-pickup",
+      "name": "Ridard",
+      "category": "electric",
+      "bodyStyle": "Pickup",
+      "fuelType": "Electric",
+      "year": 2026,
+      "color": "Serene Blue pickup truck",
+      "groundClearance": "225 mm",
+      "rangeOrMileage": "425 km+",
+      "rangeVerified": true,
+      "dailyRate": 15000,
+      "weeklyRate": 99750,
+      "fifteenDayRate": 202500,
+      "monthlyRate": 382500,
+      "image": "/images/vehicles/ridard-pickup.svg",
+      "gallery": [
+        "/images/vehicles/ridard-pickup.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "verificationNote": "Name supplied as Ridard (Radar/Riddara RD6 platform in Nepal); editable in admin.",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "225 mm"
+        },
+        {
+          "label": "Range",
+          "value": "425 km+"
+        },
+        {
+          "label": "Body Style",
+          "value": "Electric Pickup Truck"
+        },
+        {
+          "label": "Year",
+          "value": "2026"
+        }
+      ],
+      "description": "Heavy-duty electric pickup truck with 225 mm ground clearance and 425+ km range. Combines rugged utility with modern EV quietness.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "jaeco-j5",
+      "slug": "jaeco-j5",
+      "name": "Jaeco J5",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2025,
+      "color": "White",
+      "groundClearance": "185 mm",
+      "rangeOrMileage": "400 km",
+      "rangeVerified": true,
+      "dailyRate": 10000,
+      "weeklyRate": 66500,
+      "fifteenDayRate": 135000,
+      "monthlyRate": 255000,
+      "image": "/images/vehicles/jaeco-j5.svg",
+      "gallery": [
+        "/images/vehicles/jaeco-j5.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "verificationNote": "Name supplied as Jaeco J5 (Jaecoo); editable in admin.",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "185 mm"
+        },
+        {
+          "label": "Range",
+          "value": "400 km"
+        },
+        {
+          "label": "Category",
+          "value": "Electric SUV"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "Distinguished alpine white luxury electric SUV with 185 mm clearance and 400 km range. Executive presence for premium travel.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "naami-vigo",
+      "slug": "naami-vigo",
+      "name": "Naami Vigo",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2025,
+      "color": "White, large moonroof",
+      "groundClearance": "190 mm",
+      "rangeOrMileage": "380 km",
+      "rangeVerified": true,
+      "dailyRate": 8500,
+      "weeklyRate": 56525,
+      "fifteenDayRate": 114750,
+      "monthlyRate": 216750,
+      "image": "/images/vehicles/naami-vigo.svg",
+      "gallery": [
+        "/images/vehicles/naami-vigo.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "verificationNote": "Name supplied as Naami Vigo (Nammi 01/Vigo); editable in admin.",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "190 mm"
+        },
+        {
+          "label": "Range",
+          "value": "380 km"
+        },
+        {
+          "label": "Roof Feature",
+          "value": "Large Moonroof"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "Chic white electric SUV featuring an expansive moonroof, 190 mm ground clearance, and 380 km range.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "naami-box",
+      "slug": "naami-box",
+      "name": "Naami Box",
+      "category": "electric",
+      "bodyStyle": "Hatchback",
+      "fuelType": "Electric",
+      "year": 2025,
+      "color": "Blue",
+      "groundClearance": "196 mm",
+      "rangeOrMileage": "280–300 km",
+      "rangeVerified": true,
+      "dailyRate": 7000,
+      "weeklyRate": 46550,
+      "fifteenDayRate": 94500,
+      "monthlyRate": 178500,
+      "image": "/images/vehicles/naami-box.svg",
+      "gallery": [
+        "/images/vehicles/naami-box.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "verificationNote": "Name supplied as Naami Box (Nammi Box); editable in admin.",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "196 mm"
+        },
+        {
+          "label": "Range",
+          "value": "280–300 km"
+        },
+        {
+          "label": "Category",
+          "value": "Electric Hatchback"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "High-riding urban electric hatchback with impressive 196 mm ground clearance in striking blue.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "i-caur",
+      "slug": "i-caur",
+      "name": "i-caur",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2026,
+      "color": "White",
+      "groundClearance": "195 mm",
+      "rangeOrMileage": "400+500 km (Awaiting owner verification)",
+      "rangeVerified": false,
+      "dailyRate": 10000,
+      "weeklyRate": 66500,
+      "fifteenDayRate": 135000,
+      "monthlyRate": 255000,
+      "image": "/images/vehicles/i-caur.svg",
+      "gallery": [
+        "/images/vehicles/i-caur.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "verificationNote": "Name supplied as i-caur. The 400+500 km value is flagged for technical verification and not displayed as confirmed technical specification until verified by owner.",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "195 mm"
+        },
+        {
+          "label": "Body Style",
+          "value": "Electric SUV"
+        },
+        {
+          "label": "Verification",
+          "value": "Range specification awaiting confirmation"
+        },
+        {
+          "label": "Year",
+          "value": "2026"
+        }
+      ],
+      "description": "Striking boxy all-electric SUV in white with 195 mm clearance. Rugged stance and modern digital cabin.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "deepal-s05",
+      "slug": "deepal-s05",
+      "name": "Deepal S05",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2025,
+      "color": "Black/White",
+      "groundClearance": "175 mm",
+      "rangeOrMileage": "405 km",
+      "rangeVerified": true,
+      "dailyRate": 9000,
+      "weeklyRate": 59850,
+      "fifteenDayRate": 121500,
+      "monthlyRate": 229500,
+      "image": "/images/vehicles/deepal-s05.svg",
+      "gallery": [
+        "/images/vehicles/deepal-s05.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "175 mm"
+        },
+        {
+          "label": "Range",
+          "value": "405 km"
+        },
+        {
+          "label": "Category",
+          "value": "Electric SUV"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "Dynamic two-tone Black/White electric SUV featuring a 405 km range and aerodynamic styling.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "deepal-s07",
+      "slug": "deepal-s07",
+      "name": "Deepal S07",
+      "category": "electric",
+      "bodyStyle": "SUV",
+      "fuelType": "Electric",
+      "year": 2025,
+      "color": "White/Blue/Green",
+      "groundClearance": "175 mm",
+      "rangeOrMileage": "485 km",
+      "rangeVerified": true,
+      "dailyRate": 13000,
+      "weeklyRate": 86450,
+      "fifteenDayRate": 175500,
+      "monthlyRate": 331500,
+      "image": "/images/vehicles/deepal-s07.svg",
+      "gallery": [
+        "/images/vehicles/deepal-s07.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "175 mm"
+        },
+        {
+          "label": "Range",
+          "value": "485 km"
+        },
+        {
+          "label": "Category",
+          "value": "Luxury Electric SUV"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "Premium flagship electric SUV boasting an impressive 485 km range. The gold standard for silent, long-distance touring across Nepal.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "grand-i10",
+      "slug": "grand-i10",
+      "name": "Grand i10",
+      "category": "fuel",
+      "bodyStyle": "Hatchback",
+      "fuelType": "Petrol",
+      "year": 2025,
+      "color": "Silver",
+      "groundClearance": "165 mm",
+      "rangeOrMileage": "18–20 km/litre",
+      "rangeVerified": true,
+      "dailyRate": 6500,
+      "weeklyRate": 43225,
+      "fifteenDayRate": 87750,
+      "monthlyRate": 165750,
+      "image": "/images/vehicles/grand-i10.svg",
+      "gallery": [
+        "/images/vehicles/grand-i10.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "165 mm"
+        },
+        {
+          "label": "Mileage",
+          "value": "18–20 km/litre"
+        },
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Year",
+          "value": "2025"
+        }
+      ],
+      "description": "Fuel-efficient, easy-to-park silver hatchback delivering 18–20 km/litre. Ideal for bustling city traffic and economical rentals.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "nissan-magnite",
+      "slug": "nissan-magnite",
+      "name": "Nissan Magnite",
+      "category": "fuel",
+      "bodyStyle": "SUV",
+      "fuelType": "Petrol",
+      "year": 2021,
+      "color": "Silver",
+      "groundClearance": "205 mm",
+      "rangeOrMileage": "18–20 km/litre",
+      "rangeVerified": true,
+      "dailyRate": 7000,
+      "weeklyRate": 46550,
+      "fifteenDayRate": 94500,
+      "monthlyRate": 178500,
+      "image": "/images/vehicles/nissan-magnite.svg",
+      "gallery": [
+        "/images/vehicles/nissan-magnite.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "205 mm"
+        },
+        {
+          "label": "Mileage",
+          "value": "18–20 km/litre"
+        },
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Year",
+          "value": "2021"
+        }
+      ],
+      "description": "Bold compact SUV in blade silver featuring a commanding 205 mm ground clearance and excellent 18–20 km/litre fuel economy.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "hyundai-i20",
+      "slug": "hyundai-i20",
+      "name": "i20",
+      "category": "fuel",
+      "bodyStyle": "Hatchback",
+      "fuelType": "Petrol",
+      "year": 2010,
+      "color": "Silver",
+      "groundClearance": "170 mm",
+      "rangeOrMileage": "16–18 km/litre",
+      "rangeVerified": true,
+      "dailyRate": 5000,
+      "weeklyRate": 33250,
+      "fifteenDayRate": 67500,
+      "monthlyRate": 127500,
+      "image": "/images/vehicles/hyundai-i20.svg",
+      "gallery": [
+        "/images/vehicles/hyundai-i20.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "170 mm"
+        },
+        {
+          "label": "Mileage",
+          "value": "16–18 km/litre"
+        },
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Year",
+          "value": "2010"
+        }
+      ],
+      "description": "Reliable, budget-friendly everyday hatchback in silver. Great value for daily commuting and local city errands.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "vw-polo",
+      "slug": "vw-polo",
+      "name": "Volkswagen Polo",
+      "category": "fuel",
+      "bodyStyle": "Hatchback",
+      "fuelType": "Petrol",
+      "year": 2014,
+      "color": "White",
+      "groundClearance": "165 mm",
+      "rangeOrMileage": "16–18 km/litre",
+      "rangeVerified": true,
+      "dailyRate": 5000,
+      "weeklyRate": 33250,
+      "fifteenDayRate": 67500,
+      "monthlyRate": 127500,
+      "image": "/images/vehicles/vw-polo.svg",
+      "gallery": [
+        "/images/vehicles/vw-polo.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "165 mm"
+        },
+        {
+          "label": "Mileage",
+          "value": "16–18 km/litre"
+        },
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Year",
+          "value": "2014"
+        }
+      ],
+      "description": "Spacious German-engineered hatchback in clean white. Solid highway stability, comfortable cabin, and dependable performance.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "kia-sonet",
+      "slug": "kia-sonet",
+      "name": "Kia Sonet",
+      "category": "fuel",
+      "bodyStyle": "SUV",
+      "fuelType": "Petrol",
+      "year": 2021,
+      "color": "White",
+      "groundClearance": "205 mm",
+      "rangeOrMileage": "16 km/litre",
+      "rangeVerified": true,
+      "dailyRate": 7500,
+      "weeklyRate": 49875,
+      "fifteenDayRate": 101250,
+      "monthlyRate": 191250,
+      "image": "/images/vehicles/kia-sonet.svg",
+      "gallery": [
+        "/images/vehicles/kia-sonet.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "205 mm"
+        },
+        {
+          "label": "Mileage",
+          "value": "16 km/litre"
+        },
+        {
+          "label": "Fuel Type",
+          "value": "Petrol"
+        },
+        {
+          "label": "Year",
+          "value": "2021"
+        }
+      ],
+      "description": "Contemporary white compact SUV with 205 mm ground clearance and muscular styling. Ideal for family road trips.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    },
+    {
+      "id": "toyota-hilux-4x4",
+      "slug": "toyota-hilux-4x4",
+      "name": "Toyota Hilux 4x4",
+      "category": "fuel",
+      "bodyStyle": "Pickup",
+      "fuelType": "Diesel",
+      "year": 2020,
+      "color": "White",
+      "groundClearance": "310 mm",
+      "rangeOrMileage": "12 km/litre",
+      "rangeVerified": true,
+      "dailyRate": 17000,
+      "weeklyRate": 113050,
+      "fifteenDayRate": 229500,
+      "monthlyRate": 433500,
+      "image": "/images/vehicles/toyota-hilux-4x4.svg",
+      "gallery": [
+        "/images/vehicles/toyota-hilux-4x4.svg"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "isPublished": true,
+      "maintenanceStatus": "operational",
+      "specs": [
+        {
+          "label": "Ground Clearance",
+          "value": "310 mm"
+        },
+        {
+          "label": "Mileage",
+          "value": "12 km/litre"
+        },
+        {
+          "label": "Drive & Fuel",
+          "value": "4x4 Diesel"
+        },
+        {
+          "label": "Year",
+          "value": "2020"
+        }
+      ],
+      "description": "Legendary dual-cab 4x4 diesel pickup with unmatched 310 mm ground clearance. Built to tackle any mountain pass or remote trail in Nepal.",
+      "createdAt": "2026-10-26T10:42:20.618Z",
+      "updatedAt": "2026-10-26T10:42:20.618Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk_1793011594298_e7q4",
+      "reference": "UDR-2026-EHIH2",
+      "vehicleId": "byd-atto-1",
+      "vehicleName": "BYD Atto 1",
+      "vehicleImage": "/images/vehicles/byd-atto-1.svg",
+      "customerName": "Aarav Adhikari",
+      "customerPhone": "9841234567",
+      "customerEmail": "aarav@example.com",
+      "notes": "Please arrange airport pickup at TIA Terminal 1",
+      "preferredContact": "whatsapp",
+      "pickupLocation": "Tribhuvan International Airport (TIA), Kathmandu",
+      "returnLocation": "Tribhuvan International Airport (TIA), Kathmandu",
+      "pickupDate": "2026-11-01",
+      "pickupTime": "10:00",
+      "returnDate": "2026-11-23",
+      "returnTime": "10:00",
+      "rentalDays": 22,
+      "pricing": {
+        "totalDays": 22,
+        "dailyRate": 6500,
+        "totalBeforeDiscount": 143000,
+        "subtotal": 130975,
+        "savings": 12025,
+        "savingsPercent": 8,
+        "breakdown": [
+          {
+            "packageType": "fifteen_day",
+            "label": "15-Day Package",
+            "count": 1,
+            "daysCovered": 15,
+            "unitRate": 87750,
+            "subtotal": 87750
+          },
+          {
+            "packageType": "weekly",
+            "label": "7-Day Weekly Package",
+            "count": 1,
+            "daysCovered": 7,
+            "unitRate": 43225,
+            "subtotal": 43225
+          }
+        ]
+      },
+      "status": "confirmed",
+      "createdAt": "2026-10-26T10:46:34.298Z",
+      "updatedAt": "2026-10-26T10:46:34.342Z"
+    }
+  ],
+  "settings": {
+    "businessName": "UDrive Rental Service",
+    "phone": "",
+    "whatsappNumber": "",
+    "email": "",
+    "facebookUrl": "https://www.facebook.com/profile.php?id=61584871988112",
+    "pickupLocations": [
+      "Tribhuvan International Airport (TIA), Kathmandu",
+      "Thamel, Kathmandu",
+      "Lazimpat, Kathmandu",
+      "Jhamsikhel / Sanepa, Lalitpur",
+      "Lakeside, Pokhara"
+    ],
+    "minimumRentalDays": 1
+  }
+}
